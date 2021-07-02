@@ -1,0 +1,62 @@
+2021/07/02 09:15:46:917[ERROR] token is empty!
+2021/07/02 09:15:59:421[ERROR] token is empty!
+2021/07/02 09:17:04:246[ERROR] token is empty!
+2021/07/02 09:17:05:337[ERROR] token is empty!
+2021/07/02 09:17:05:909[ERROR] token is empty!
+2021/07/02 09:17:06:456[ERROR] token is empty!
+2021/07/02 09:17:08:012[ERROR] token is empty!
+2021/07/02 09:17:09:217[ERROR] token is empty!
+2021/07/02 09:17:10:068[ERROR] token is empty!
+2021/07/02 09:17:10:614[ERROR] token is empty!
+2021/07/02 09:17:11:025[ERROR] token is empty!
+2021/07/02 09:17:11:462[ERROR] token is empty!
+2021/07/02 09:18:36:570[ERROR] token is empty!
+2021/07/02 09:20:01:370[ERROR] token is empty!
+2021/07/02 09:20:02:673[ERROR] token is empty!
+2021/07/02 09:20:42:950[ERROR] token is empty!
+2021/07/02 09:20:44:193[ERROR] token is empty!
+2021/07/02 09:20:44:850[ERROR] token is empty!
+2021/07/02 09:31:02:226[ERROR] Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2021/07/02 09:38:58:874[ERROR] Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2021/07/02 09:44:20:607[ERROR] Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2021/07/02 10:03:28:179[ERROR] Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2021/07/02 10:06:45:986[ERROR] Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2021/07/02 10:06:54:580[ERROR] Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2021/07/02 10:14:30:587[ERROR] Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2021/07/02 10:17:34:593[ERROR] Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2021/07/02 10:25:50:602[ERROR] Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2021/07/02 10:27:06:616[ERROR] Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2021/07/02 10:27:22:035[ERROR] Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2021/07/02 10:27:41:308[ERROR] Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2021/07/02 10:32:06:182[ERROR] Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2021/07/02 10:49:43:953[ERROR] Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2021/07/02 10:52:35:590[ERROR] PreparedStatementCallback; bad SQL grammar [SELECT id,first_name,last_name,password,phone,email FROM user WHERE id = ?]; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'first_name' in 'field list'
+2021/07/02 10:54:08:984[ERROR] PreparedStatementCallback; bad SQL grammar [SELECT id,first_name,last_name,password,phone,email FROM user WHERE id = ?]; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'email' in 'field list'

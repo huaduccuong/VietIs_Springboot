@@ -1,0 +1,50 @@
+2021/07/02 09:22:32:137[INFO][logID]  Request http://localhost:8080/api
+2021/07/02 09:22:32:144[INFO]  Response=[unknown]
+2021/07/02 09:22:32:212[INFO][logID]  Request http://localhost:8080/api/error
+2021/07/02 09:22:32:212[INFO]  Response={"timestamp":"2021-07-02T02:22:32.166+00:00","status":404,"error":"Not Found","message":"","path":"/api"}
+2021/07/02 09:22:40:919[INFO][logID]  Request http://localhost:8080/api/test/hi
+2021/07/02 09:22:40:920[INFO]  Response=hihi
+2021/07/02 09:31:02:302[INFO][logID]  Request http://localhost:8080/api/users/1
+2021/07/02 09:31:02:303[INFO]  Response={"errorCode":"E0","message":"Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure\n\nThe last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server."}
+2021/07/02 09:38:58:894[INFO][logID]  Request http://localhost:8080/api/users
+2021/07/02 09:38:58:895[INFO]  Response={"errorCode":"E0","message":"Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure\n\nThe last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server."}
+2021/07/02 09:44:20:660[INFO][logID]  Request http://localhost:8080/api/users/1
+2021/07/02 09:44:20:660[INFO]  Response={"errorCode":"E0","message":"Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure\n\nThe last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server."}
+2021/07/02 10:03:28:277[INFO][logID]  Request http://localhost:8080/api/users/1
+2021/07/02 10:03:28:278[INFO]  Response={"errorCode":"E0","message":"Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure\n\nThe last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server."}
+2021/07/02 10:06:45:992[INFO][logID]  Request http://localhost:8080/api/users
+2021/07/02 10:06:45:992[INFO]  Response={"errorCode":"E0","message":"Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure\n\nThe last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server."}
+2021/07/02 10:06:54:583[INFO][logID]  Request http://localhost:8080/api/users/1
+2021/07/02 10:06:54:583[INFO]  Response={"errorCode":"E0","message":"Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure\n\nThe last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server."}
+2021/07/02 10:14:30:636[INFO][logID]  Request http://localhost:8080/api/users/1
+2021/07/02 10:14:30:636[INFO]  Response={"errorCode":"E0","message":"Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure\n\nThe last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server."}
+2021/07/02 10:17:15:321[INFO][logID]  Request http://localhost:8080/api/test/hi
+2021/07/02 10:17:15:322[INFO]  Response=hihi
+2021/07/02 10:17:34:609[INFO][logID]  Request http://localhost:8080/api/users/1
+2021/07/02 10:17:34:610[INFO]  Response={"errorCode":"E0","message":"Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure\n\nThe last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server."}
+2021/07/02 10:25:50:678[INFO][logID]  Request http://localhost:8080/api/users/1
+2021/07/02 10:25:50:678[INFO]  Response={"errorCode":"E0","message":"Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure\n\nThe last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server."}
+2021/07/02 10:27:06:675[INFO][logID]  Request http://localhost:8080/api/users/1
+2021/07/02 10:27:06:676[INFO]  Response={"errorCode":"E0","message":"Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure\n\nThe last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server."}
+2021/07/02 10:27:22:054[INFO][logID]  Request http://localhost:8080/api/users
+2021/07/02 10:27:22:056[INFO]  Response={"errorCode":"E0","message":"Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure\n\nThe last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server."}
+2021/07/02 10:27:41:313[INFO][logID]  Request http://localhost:8080/api/users/1
+2021/07/02 10:27:41:313[INFO]  Response={"errorCode":"E0","message":"Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure\n\nThe last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server."}
+2021/07/02 10:32:06:246[INFO][logID]  Request http://localhost:8080/api/users/1
+2021/07/02 10:32:06:247[INFO]  Response={"errorCode":"E0","message":"Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure\n\nThe last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server."}
+2021/07/02 10:49:43:961[INFO][logID]  Request http://localhost:8080/api/users/1
+2021/07/02 10:49:43:962[INFO]  Response={"errorCode":"E0","message":"Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure\n\nThe last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server."}
+2021/07/02 10:52:35:648[INFO][logID]  Request http://localhost:8080/api/users/1
+2021/07/02 10:52:35:649[INFO]  Response={"errorCode":"E0","message":"PreparedStatementCallback; bad SQL grammar [SELECT id,first_name,last_name,password,phone,email FROM user WHERE id = ?]; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'first_name' in 'field list'"}
+2021/07/02 10:54:08:986[INFO][logID]  Request http://localhost:8080/api/users/1
+2021/07/02 10:54:08:987[INFO]  Response={"errorCode":"E0","message":"PreparedStatementCallback; bad SQL grammar [SELECT id,first_name,last_name,password,phone,email FROM user WHERE id = ?]; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'email' in 'field list'"}
+2021/07/02 10:54:38:778[INFO][logID]  Request http://localhost:8080/api/users/1
+2021/07/02 10:54:38:779[INFO]  Response={"id":"1","firstName":"hi","lastName":"cuong","email":null,"phone":"1"}
+2021/07/02 12:16:49:137[INFO][logID]  Request http://localhost:8080/api/login Payload={"userName":"1","password":"1"}
+2021/07/02 12:16:49:151[INFO]  Response={"id":"1","firstName":"hi","lastName":"cuong","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjUyMDMwMDksImV4cCI6MTYyNTI4OTQwOX0.B2dbqBN2dA-EiRPO_37DbgwoSa1X-nfeKSMmLOj34eM"}
+2021/07/02 12:16:49:334[INFO][logID]  Request http://localhost:8080/api/users/1
+2021/07/02 12:16:49:335[INFO]  Response={"id":"1","firstName":"hi","lastName":"cuong","email":null,"phone":"1"}
+2021/07/02 12:37:57:408[INFO][logID]  Request http://localhost:8080/api/login Payload={"userName":"1","password":"1"}
+2021/07/02 12:37:57:409[INFO]  Response={"id":"1","firstName":"hi","lastName":"cuong","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjUyMDQyNzcsImV4cCI6MTYyNTI5MDY3N30.JCK9Q6bqhlWqluDbJIgzr4fT0fCtiCeTfqS6092CfMc"}
+2021/07/02 12:37:57:432[INFO][logID]  Request http://localhost:8080/api/users/1
+2021/07/02 12:37:57:433[INFO]  Response={"id":"1","firstName":"hi","lastName":"cuong","email":null,"phone":"1"}
