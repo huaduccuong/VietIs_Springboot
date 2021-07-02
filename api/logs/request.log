@@ -48,3 +48,136 @@
 2021/07/02 12:37:57:409[INFO]  Response={"id":"1","firstName":"hi","lastName":"cuong","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjUyMDQyNzcsImV4cCI6MTYyNTI5MDY3N30.JCK9Q6bqhlWqluDbJIgzr4fT0fCtiCeTfqS6092CfMc"}
 2021/07/02 12:37:57:432[INFO][logID]  Request http://localhost:8080/api/users/1
 2021/07/02 12:37:57:433[INFO]  Response={"id":"1","firstName":"hi","lastName":"cuong","email":null,"phone":"1"}
+2021/07/02 15:15:43:523[INFO][logID]  Request http://localhost:8080/api/login Payload={
+    "userName": "1",
+    "password": "1"
+}
+2021/07/02 15:15:43:535[INFO]  Response={"id":"1","firstName":"hi","lastName":"cuong","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjUyMTM3NDMsImV4cCI6MTYyNTMwMDE0M30.dtE2cjltGE6f2WESlZJvLV86VbnKTfS5utLSZpBC7-c"}
+2021/07/02 15:15:54:829[INFO][logID]  Request http://localhost:8080/api/test/hi
+2021/07/02 15:15:54:829[INFO]  Response=hihi
+2021/07/02 16:06:42:468[INFO][logID]  Request http://localhost:8080/api/login Payload={"userName":"1","password":"1"}
+2021/07/02 16:06:42:478[INFO]  Response={"id":"1","firstName":"hi","lastName":"cuong","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjUyMTY4MDIsImV4cCI6MTYyNTMwMzIwMn0.6KVwU1b2p0CP412V8B9kSOqMB9zQ02L5TXI7ryQRV3k"}
+2021/07/02 16:09:18:989[INFO][logID]  Request http://localhost:8080/api/login Payload={"userName":"1","password":"1"}
+2021/07/02 16:09:18:990[INFO]  Response={"id":"1","firstName":"hi","lastName":"cuong","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjUyMTY5NTgsImV4cCI6MTYyNTMwMzM1OH0.2avnCrFvExnG-6tJIM1mRdKjCac-5qipmJ2c7QAZFHU"}
+2021/07/02 16:09:19:331[INFO][logID]  Request http://localhost:8080/api/folder/0/1
+2021/07/02 16:09:19:331[INFO]  Response={"errorCode":"E0","message":"StatementCallback; bad SQL grammar [SELECT id,name,date,folder_id,user_id FROM folder WHERE id = ? and user_id = ?]; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '? and user_id = ?' at line 1"}
+2021/07/02 16:10:17:254[INFO][logID]  Request http://localhost:8080/api/login Payload={"userName":"1","password":"1"}
+2021/07/02 16:10:17:254[INFO]  Response={"id":"1","firstName":"hi","lastName":"cuong","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjUyMTcwMTcsImV4cCI6MTYyNTMwMzQxN30.g_lYUbiDdx_00KwCRkVsWzWRTSOFw0eEel9gPK5louc"}
+2021/07/02 16:10:17:310[INFO][logID]  Request http://localhost:8080/api/users/1
+2021/07/02 16:10:17:310[INFO]  Response={"id":"1","firstName":"hi","lastName":"cuong","email":null,"phone":"1"}
+2021/07/02 16:12:03:687[INFO][logID]  Request http://localhost:8080/api/login Payload={"userName":"1","password":"1"}
+2021/07/02 16:12:03:687[INFO]  Response={"id":"1","firstName":"hi","lastName":"cuong","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjUyMTcxMjMsImV4cCI6MTYyNTMwMzUyM30.XfgAT6DHaSWxyRVaYOuvlILuBThu5yNdioiSUWsZCKw"}
+2021/07/02 16:13:41:804[INFO][logID]  Request http://localhost:8080/api/folder/0/1
+2021/07/02 16:13:41:804[INFO]  Response={"errorCode":"E0","message":"StatementCallback; bad SQL grammar [SELECT id,name,date,folder_id,user_id FROM folder WHERE id = ? and user_id = ?]; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '? and user_id = ?' at line 1"}
+2021/07/02 16:14:55:511[INFO][logID]  Request http://localhost:8080/api/login Payload={"userName":"1","password":"1"}
+2021/07/02 16:14:55:511[INFO]  Response={"id":"1","firstName":"hi","lastName":"cuong","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjUyMTcyOTUsImV4cCI6MTYyNTMwMzY5NX0.4aEks6lRrX1i2QH9_HM_6VMb0teDZoe-lkU1JVCagvU"}
+2021/07/02 16:15:13:387[INFO][logID]  Request http://localhost:8080/api/folder/0/1
+2021/07/02 16:15:13:387[INFO]  Response={"errorCode":"E0","message":"StatementCallback; bad SQL grammar [SELECT id,name,date,folder_id,user_id FROM folder WHERE id = ? and user_id = ?]; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '? and user_id = ?' at line 1"}
+2021/07/02 16:16:11:117[INFO][logID]  Request http://localhost:8080/api/login Payload={"userName":"1","password":"1"}
+2021/07/02 16:16:11:118[INFO]  Response={"id":"1","firstName":"hi","lastName":"cuong","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjUyMTczNzEsImV4cCI6MTYyNTMwMzc3MX0.OQm-ywdYQV6wqth1Ay23wUJXUp6auFxO0KjJZE5rlzg"}
+2021/07/02 16:16:11:169[INFO][logID]  Request http://localhost:8080/api/folder/0/1
+2021/07/02 16:16:11:169[INFO]  Response={"errorCode":"E0","message":"StatementCallback; bad SQL grammar [SELECT id,name,date,folder_id,user_id FROM folder WHERE id = ? and user_id = ?]; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '? and user_id = ?' at line 1"}
+2021/07/02 16:17:07:596[INFO][logID]  Request http://localhost:8080/api/login Payload={"userName":"1","password":"1"}
+2021/07/02 16:17:07:596[INFO]  Response={"id":"1","firstName":"hi","lastName":"cuong","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjUyMTc0MjcsImV4cCI6MTYyNTMwMzgyN30.uWFDVz_k_bxOKMYrOEq_Fg5mmhW9A59NoIjjQjGXDk4"}
+2021/07/02 16:17:07:650[INFO][logID]  Request http://localhost:8080/api/folder/0/1
+2021/07/02 16:17:07:650[INFO]  Response={"errorCode":"E0","message":"StatementCallback; bad SQL grammar [SELECT id,name,date,folder_id,user_id FROM folder WHERE id = ? and user_id = ?]; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '? and user_id = ?' at line 1"}
+2021/07/02 16:17:44:507[INFO][logID]  Request http://localhost:8080/api/login Payload={"userName":"1","password":"1"}
+2021/07/02 16:17:44:508[INFO]  Response={"id":"1","firstName":"hi","lastName":"cuong","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjUyMTc0NjQsImV4cCI6MTYyNTMwMzg2NH0.pQTDFdlyEtt_eg9XP-QQF6whh1j6UZ2slHbSeHPjbbY"}
+2021/07/02 16:17:44:569[INFO][logID]  Request http://localhost:8080/api/folder/0/1
+2021/07/02 16:17:44:569[INFO]  Response={"errorCode":"E0","message":"StatementCallback; bad SQL grammar [SELECT id,name,date,folder_id,user_id FROM folder WHERE id = ? and user_id = ?]; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '? and user_id = ?' at line 1"}
+2021/07/02 16:18:07:159[INFO][logID]  Request http://localhost:8080/api/login Payload={"userName":"1","password":"1"}
+2021/07/02 16:18:07:159[INFO]  Response={"id":"1","firstName":"hi","lastName":"cuong","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjUyMTc0ODcsImV4cCI6MTYyNTMwMzg4N30.Yu1HMb-SSl0VLYJKaPGHLBYa5y49BGZMKVGP9mdyTGU"}
+2021/07/02 16:18:07:224[INFO][logID]  Request http://localhost:8080/api/folder/0/1
+2021/07/02 16:18:07:224[INFO]  Response={"errorCode":"E0","message":"StatementCallback; bad SQL grammar [SELECT id,name,date,folder_id,user_id FROM folder WHERE id = ? and user_id = ?]; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '? and user_id = ?' at line 1"}
+2021/07/02 16:18:47:160[INFO][logID]  Request http://localhost:8080/api/login Payload={"userName":"1","password":"1"}
+2021/07/02 16:18:47:161[INFO]  Response={"id":"1","firstName":"hi","lastName":"cuong","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjUyMTc1MjcsImV4cCI6MTYyNTMwMzkyN30.53OzALzx3eGkP9_skuwfQnR_c5PaYAeQoY5E1syULYg"}
+2021/07/02 16:18:47:218[INFO][logID]  Request http://localhost:8080/api/folder/0/1
+2021/07/02 16:18:47:218[INFO]  Response={"errorCode":"E0","message":"StatementCallback; bad SQL grammar [SELECT id,name,date,folder_id,user_id FROM folder WHERE id = ? and user_id = ?]; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '? and user_id = ?' at line 1"}
+2021/07/02 16:19:12:489[INFO][logID]  Request http://localhost:8080/api/login Payload={"userName":"1","password":"1"}
+2021/07/02 16:19:12:489[INFO]  Response={"id":"1","firstName":"hi","lastName":"cuong","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjUyMTc1NTIsImV4cCI6MTYyNTMwMzk1Mn0.eDUWTcoBmhXb6ag-rdzuwXlgVCN3zwWEa0TRd227EhI"}
+2021/07/02 16:19:12:542[INFO][logID]  Request http://localhost:8080/api/folder/0/1
+2021/07/02 16:19:12:542[INFO]  Response={"errorCode":"E0","message":"StatementCallback; bad SQL grammar [SELECT id,name,date,folder_id,user_id FROM folder WHERE id = ? and user_id = ?]; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '? and user_id = ?' at line 1"}
+2021/07/02 16:21:29:509[INFO][logID]  Request http://localhost:8080/api/login Payload={"userName":"1","password":"1"}
+2021/07/02 16:21:29:509[INFO]  Response={"id":"1","firstName":"hi","lastName":"cuong","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjUyMTc2ODksImV4cCI6MTYyNTMwNDA4OX0.gwIOViHrxsUROc7sK5LibWG9UuYPC_8fUki49FcFIZ8"}
+2021/07/02 16:22:03:355[INFO][logID]  Request http://localhost:8080/api/login Payload={"userName":"1","password":"1"}
+2021/07/02 16:22:03:356[INFO]  Response={"id":"1","firstName":"hi","lastName":"cuong","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjUyMTc3MjMsImV4cCI6MTYyNTMwNDEyM30.fUjw2A-4rz8Zd-rW61LuL89jR4ONj_1g5d-vg7Da3PU"}
+2021/07/02 16:30:26:380[INFO][logID]  Request http://localhost:8080/api/login Payload={"userName":"1","password":"1"}
+2021/07/02 16:30:26:386[INFO]  Response={"id":"1","firstName":"hi","lastName":"cuong","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjUyMTgyMjYsImV4cCI6MTYyNTMwNDYyNn0.hCbFY1rxUIfeFcqyJNjZLLdk7CoqcVKQ3frdEm_MSro"}
+2021/07/02 16:30:26:514[INFO][logID]  Request http://localhost:8080/api/folder/0/1
+2021/07/02 16:30:26:514[INFO]  Response={"errorCode":"E0","message":"StatementCallback; bad SQL grammar [SELECT id,name,date,folder_id,user_id FROM folder WHERE id = ? and user_id = ?]; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '? and user_id = ?' at line 1"}
+2021/07/02 16:31:00:096[INFO][logID]  Request http://localhost:8080/api/login Payload={"userName":"1","password":"1"}
+2021/07/02 16:31:00:096[INFO]  Response={"id":"1","firstName":"hi","lastName":"cuong","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjUyMTgyNjAsImV4cCI6MTYyNTMwNDY2MH0.0GT0Hpn_C01Lz55OpUrJGAMFJ63Sbtnw2-og1sL6Pag"}
+2021/07/02 16:33:07:020[INFO][logID]  Request http://localhost:8080/api/folder/0/1
+2021/07/02 16:33:07:020[INFO]  Response={"errorCode":"E0","message":"StatementCallback; bad SQL grammar [SELECT id,name,date,folder_id,user_id FROM folder WHERE id = ? and user_id = ?]; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '? and user_id = ?' at line 1"}
+2021/07/02 16:38:29:803[INFO][logID]  Request http://localhost:8080/api/login Payload={"userName":"1","password":"1"}
+2021/07/02 16:38:29:803[INFO]  Response={"id":"1","firstName":"hi","lastName":"cuong","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjUyMTg3MDksImV4cCI6MTYyNTMwNTEwOX0.lzdj8LEkyZzWv-dZsAg1DmrTlEbvYfg0nIVpmdswCw4"}
+2021/07/02 16:38:29:866[INFO][logID]  Request http://localhost:8080/api/folder/0/1
+2021/07/02 16:38:29:866[INFO]  Response={"errorCode":"E0","message":"StatementCallback; bad SQL grammar [SELECT id,name,date,folder_id,user_id FROM folder WHERE id = ? and user_id = ?]; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '? and user_id = ?' at line 1"}
+2021/07/02 16:43:20:802[INFO][logID]  Request http://localhost:8080/api/folder/0/1
+2021/07/02 16:43:20:802[INFO]  Response={"errorCode":"E0","message":"StatementCallback; bad SQL grammar [SELECT id,name,date,folder_id,user_id FROM folder WHERE id = ? and user_id = ?]; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '? and user_id = ?' at line 1"}
+2021/07/02 16:48:08:132[INFO][logID]  Request http://localhost:8080/api/folder/0/1
+2021/07/02 16:48:08:133[INFO]  Response={"errorCode":"E0","message":"class vn.co.vis.restful.dao.entity.Folder cannot be cast to class java.util.List (vn.co.vis.restful.dao.entity.Folder is in unnamed module of loader 'app'; java.util.List is in module java.base of loader 'bootstrap')"}
+2021/07/02 16:49:29:076[INFO][logID]  Request http://localhost:8080/api/folder/0/1
+2021/07/02 16:49:29:082[INFO]  Response=[{"id":1,"name":"root","date":null,"folderId":1,"userId":1}]
+2021/07/02 16:49:55:226[INFO][logID]  Request http://localhost:8080/api/login Payload={"userName":"1","password":"1"}
+2021/07/02 16:49:55:227[INFO]  Response={"id":"1","firstName":"hi","lastName":"cuong","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjUyMTkzOTUsImV4cCI6MTYyNTMwNTc5NX0.bSOM8o9hcW7Ki8SBF--xYD6I8sl6zHQh1qaa8fh6eSE"}
+2021/07/02 16:49:55:292[INFO][logID]  Request http://localhost:8080/api/folder/0/1
+2021/07/02 16:49:55:293[INFO]  Response=[{"id":1,"name":"root","date":null,"folderId":1,"userId":1}]
+2021/07/02 17:08:38:766[INFO][logID]  Request http://localhost:8080/api/login Payload={"userName":"1","password":"1"}
+2021/07/02 17:08:38:766[INFO]  Response={"id":"1","firstName":"hi","lastName":"cuong","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjUyMjA1MTgsImV4cCI6MTYyNTMwNjkxOH0.niTlSCRHMHseEH0jL2ojq-fHg41daJz4KS1EHLnigpM"}
+2021/07/02 17:08:38:872[INFO][logID]  Request http://localhost:8080/api/folder/0/1
+2021/07/02 17:08:38:873[INFO]  Response=[{"id":1,"name":"root","date":null,"folderId":1,"userId":1}]
+2021/07/02 17:09:38:160[INFO][logID]  Request http://localhost:8080/api/login Payload={"userName":"1","password":"1"}
+2021/07/02 17:09:38:161[INFO]  Response={"id":"1","firstName":"hi","lastName":"cuong","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjUyMjA1NzgsImV4cCI6MTYyNTMwNjk3OH0.n3fL8lnU5fLsc9r_nPiRUlKdJanSQedGBdM90sOUSZs"}
+2021/07/02 17:09:38:446[INFO][logID]  Request http://localhost:8080/api/folder/0/1
+2021/07/02 17:09:38:447[INFO]  Response=[{"id":1,"name":"root","date":null,"folderId":1,"userId":1}]
+2021/07/02 17:11:08:470[INFO][logID]  Request http://localhost:8080/api/login Payload={"userName":"1","password":"1"}
+2021/07/02 17:11:08:470[INFO]  Response={"id":"1","firstName":"hi","lastName":"cuong","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjUyMjA2NjgsImV4cCI6MTYyNTMwNzA2OH0.fT41xGClnKZOIPa-x8onU3n7R1ZmemHp_xPPjnP5V4k"}
+2021/07/02 17:11:08:526[INFO][logID]  Request http://localhost:8080/api/folder/0/1
+2021/07/02 17:11:08:526[INFO]  Response=[{"id":1,"name":"root","date":null,"folderId":1,"userId":1}]
+2021/07/02 17:12:20:788[INFO][logID]  Request http://localhost:8080/api/login Payload={"userName":"1","password":"1"}
+2021/07/02 17:12:20:789[INFO]  Response={"id":"1","firstName":"hi","lastName":"cuong","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjUyMjA3NDAsImV4cCI6MTYyNTMwNzE0MH0.qugTxqUqvIUj8UtZCV4BU0vOujVfAjSJQWKGEoKOZWg"}
+2021/07/02 17:12:20:857[INFO][logID]  Request http://localhost:8080/api/folder/0/1
+2021/07/02 17:12:20:857[INFO]  Response=[{"id":1,"name":"root","date":null,"folderId":1,"userId":1}]
+2021/07/02 17:16:27:612[INFO][logID]  Request http://localhost:8080/api/login Payload={"userName":"1","password":"1"}
+2021/07/02 17:16:27:612[INFO]  Response={"id":"1","firstName":"hi","lastName":"cuong","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjUyMjA5ODcsImV4cCI6MTYyNTMwNzM4N30.o8WlRZkILadAXm6oe8IAqtEcpF5KOGUOhdE-O3kj-FM"}
+2021/07/02 17:16:27:674[INFO][logID]  Request http://localhost:8080/api/folder/0/1
+2021/07/02 17:16:27:674[INFO]  Response=[{"id":1,"name":"root","date":null,"folderId":1,"userId":1}]
+2021/07/02 17:17:00:494[INFO][logID]  Request http://localhost:8080/api/login Payload={"userName":"1","password":"1"}
+2021/07/02 17:17:00:494[INFO]  Response={"id":"1","firstName":"hi","lastName":"cuong","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjUyMjEwMjAsImV4cCI6MTYyNTMwNzQyMH0.looySj4PrT7d1XX5WHpmPHNmZ-pKFjh_Zgg8I6tVy-4"}
+2021/07/02 17:17:00:552[INFO][logID]  Request http://localhost:8080/api/folder/0/1
+2021/07/02 17:17:00:552[INFO]  Response=[{"id":1,"name":"root","date":null,"folderId":1,"userId":1}]
+2021/07/02 17:19:17:521[INFO][logID]  Request http://localhost:8080/api/login Payload={"userName":"1","password":"1"}
+2021/07/02 17:19:17:521[INFO]  Response={"id":"1","firstName":"hi","lastName":"cuong","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjUyMjExNTcsImV4cCI6MTYyNTMwNzU1N30.-JP6xY4JmZHh2C6iVdxT6jSPg9TPKwwWXhqKYjc52ac"}
+2021/07/02 17:19:17:575[INFO][logID]  Request http://localhost:8080/api/folder/0/1
+2021/07/02 17:19:17:575[INFO]  Response=[{"id":1,"name":"root","date":null,"folderId":1,"userId":1}]
+2021/07/02 17:21:14:582[INFO][logID]  Request http://localhost:8080/api/login Payload={"userName":"1","password":"1"}
+2021/07/02 17:21:14:582[INFO]  Response={"id":"1","firstName":"hi","lastName":"cuong","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjUyMjEyNzQsImV4cCI6MTYyNTMwNzY3NH0._8mWidFDdTZvKJMj3VkzHOzog-UppzoR5pCn8nMb-eg"}
+2021/07/02 17:21:14:644[INFO][logID]  Request http://localhost:8080/api/folder/0/1
+2021/07/02 17:21:14:644[INFO]  Response=[{"id":1,"name":"root","date":null,"folderId":1,"userId":1}]
+2021/07/02 17:22:39:355[INFO][logID]  Request http://localhost:8080/api/login Payload={"userName":"1","password":"1"}
+2021/07/02 17:22:39:355[INFO]  Response={"id":"1","firstName":"hi","lastName":"cuong","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjUyMjEzNTksImV4cCI6MTYyNTMwNzc1OX0.6bJXFaO4w6P9Nu2BXlgs1LNmHhCzGRDtu-BLHvitCFI"}
+2021/07/02 17:22:39:421[INFO][logID]  Request http://localhost:8080/api/folder/0/1
+2021/07/02 17:22:39:421[INFO]  Response=[{"id":1,"name":"root","date":null,"folderId":1,"userId":1}]
+2021/07/02 17:23:32:821[INFO][logID]  Request http://localhost:8080/api/login Payload={"userName":"1","password":"1"}
+2021/07/02 17:23:32:821[INFO]  Response={"id":"1","firstName":"hi","lastName":"cuong","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjUyMjE0MTIsImV4cCI6MTYyNTMwNzgxMn0.Vvozhevsrf62GH0nViDErvrXOXwdsPx3iD3FE89EZsY"}
+2021/07/02 17:23:32:886[INFO][logID]  Request http://localhost:8080/api/folder/0/1
+2021/07/02 17:23:32:886[INFO]  Response=[{"id":1,"name":"root","date":null,"folderId":1,"userId":1}]
+2021/07/02 17:24:21:488[INFO][logID]  Request http://localhost:8080/api/login Payload={"userName":"1","password":"1"}
+2021/07/02 17:24:21:489[INFO]  Response={"id":"1","firstName":"hi","lastName":"cuong","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjUyMjE0NjEsImV4cCI6MTYyNTMwNzg2MX0.TeZyzVv2yO4TlArQXQlM1KVjZ0_KoISIbs3FDNMmDzY"}
+2021/07/02 17:24:21:547[INFO][logID]  Request http://localhost:8080/api/folder/0/1
+2021/07/02 17:24:21:547[INFO]  Response=[{"id":1,"name":"root","date":null,"folderId":1,"userId":1}]
+2021/07/02 17:28:26:787[INFO][logID]  Request http://localhost:8080/api/folder/0/1
+2021/07/02 17:28:26:787[INFO]  Response=[{"id":1,"name":"root","date":null,"folderId":1,"userId":1}]
+2021/07/02 17:29:24:011[INFO][logID]  Request http://localhost:8080/api/login Payload={"userName":"1","password":"1"}
+2021/07/02 17:29:24:011[INFO]  Response={"id":"1","firstName":"hi","lastName":"cuong","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjUyMjE3NjQsImV4cCI6MTYyNTMwODE2NH0.oEUTlAEfHClzvuI0ADPCn-vQvKrX5zbyP06AGRmqDFI"}
+2021/07/02 17:29:24:071[INFO][logID]  Request http://localhost:8080/api/folder/0/1
+2021/07/02 17:29:24:071[INFO]  Response=[{"id":1,"name":"root","date":null,"folderId":1,"userId":1}]
+2021/07/02 17:33:10:874[INFO][logID]  Request http://localhost:8080/api/login Payload={"userName":"1","password":"1"}
+2021/07/02 17:33:10:880[INFO]  Response={"id":"1","firstName":"hi","lastName":"cuong","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjUyMjE5OTAsImV4cCI6MTYyNTMwODM5MH0.o8501kocOHyvhgVpgo5dHCpl-6msLNsY5C_bJ95W7bc"}
+2021/07/02 17:33:11:009[INFO][logID]  Request http://localhost:8080/api/folder/0/1
+2021/07/02 17:33:11:010[INFO]  Response=[{"id":1,"name":"root","date":null,"folderId":1,"userId":1}]
+2021/07/02 17:35:33:776[INFO][logID]  Request http://localhost:8080/api/login Payload={"userName":"1","password":"1"}
+2021/07/02 17:35:33:776[INFO]  Response={"id":"1","firstName":"hi","lastName":"cuong","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjUyMjIxMzMsImV4cCI6MTYyNTMwODUzM30.hRudZo5JykJey1sZZnwxups0T9bIfz52JOk1QDs91BY"}
+2021/07/02 17:35:33:828[INFO][logID]  Request http://localhost:8080/api/folder/0/1
+2021/07/02 17:35:33:828[INFO]  Response=[{"id":1,"name":"root","date":null,"folderId":1,"userId":1}]

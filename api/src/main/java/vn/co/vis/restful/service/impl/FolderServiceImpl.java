@@ -1,6 +1,7 @@
 package vn.co.vis.restful.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import vn.co.vis.restful.dao.entity.Folder;
 import vn.co.vis.restful.dao.entity.User;
 import vn.co.vis.restful.dao.repository.FolderRepository;
@@ -15,6 +16,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+@Service
 public class FolderServiceImpl  extends AbstractService implements FolderService {
     @Autowired
     FolderRepository folderRepository;

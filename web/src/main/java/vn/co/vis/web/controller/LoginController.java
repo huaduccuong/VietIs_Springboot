@@ -36,6 +36,7 @@ public class LoginController extends AbstractController<LoginService> {
         if (response.equals(null)) {
             return new ModelAndView("redirect:/error/system-error");
         }
-        return new ModelAndView("redirect:/user/detail?user-name=" + request.getUserName());
+//        return new ModelAndView("redirect:/user/detail?user-name=" + request.getUserName());
+        return new ModelAndView("redirect:/folders/parent?id=0"+"&user-id="+ request.getUserName());
     }
 }

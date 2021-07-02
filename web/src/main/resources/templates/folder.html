@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xml:lang="en" lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<table>
+    <th:block th:each="folder : ${folderInfo}">
+        <tr>
+            <img th:src="@{/img/anhfolder.jpg}" />
+            <td th:text="${folder.name}">...</td>
+            <td th:text="${folder.date}">...</td>
+        </tr>
+    </th:block>
+</table>
+</body>
+</html>
