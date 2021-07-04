@@ -7,13 +7,24 @@
 <body>
 
 <table>
-    <th:block th:each="folder : ${folderInfo}">
-        <tr>
-            <img th:src="@{/img/anhfolder.jpg}" />
-            <td th:text="${folder.name}">...</td>
-            <td th:text="${folder.date}">...</td>
-        </tr>
-    </th:block>
+    <h1 th:text="${test}"></h1>
+    <tr th:each="folder : ${folderInfo}">
+<!--        <img th:src="@{/img/unnamed.jpg}" th:width="40" th:height="40">-->
+            <td>
+                    <img th:src="@{/img/anhfolder.jpg}" th:width="40" th:height="40">
+            </td>
+            <td th:text="${folder.name}"> </td>
+            <td th:text="${folder.date}"> </td>
+    </tr>
+    <div>
+        <form th:action="@{/upload}" method="post" enctype="multipart/form-data" >
+            <table>
+                <tr><td>File to upload:</td><td><input type="file" name="file" /></td></tr>
+                <tr><td></td><td><input type="submit" value="Upload" /></td></tr>
+            </table>
+        </form>
+    </div>
+
 </table>
 </body>
 </html>

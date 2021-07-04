@@ -18,7 +18,7 @@ public class FolderController extends AbstractController<FolderService>{
                                  @RequestParam(name = "user-id") String userId) {
         ModelAndView modelAndView = new ModelAndView("folder");
         modelAndView.addObject("folderInfo", service.getFolder(httpServletRequest, idFolder,userId).get());
-
+        modelAndView.addObject("test","haha");
         return modelAndView;
     }
 }

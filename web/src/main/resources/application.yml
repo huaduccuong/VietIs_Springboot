@@ -7,3 +7,4 @@ server:
     context-path: /web
 
 server.error.whitelabel.enabled: false
+
