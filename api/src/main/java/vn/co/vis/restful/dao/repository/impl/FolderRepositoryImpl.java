@@ -23,17 +23,14 @@ public class FolderRepositoryImpl extends AbstractRepository implements FolderRe
     }
 
     @Override
-    public String deleteById(String id) {
+    public  String deleteById(String id) {
         StringBuilder sql = new StringBuilder();
         sql.append("DELETE ").append(attributeNamesForSelect(Folder.class));
         sql.append(" FROM ").append(getSimpleNameTable(Folder.class));
         sql.append(" WHERE id = ?");
         jdbcTemplate.update(sql.toString(),id);
-        return "Delete success";
+        return  "delete success";
     }
 
-    @Override
-    public String updateById(String id, String name) {
-        return null;
-    }
+
 }

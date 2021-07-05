@@ -9,6 +9,6 @@ import java.util.Optional;
 
 public interface FolderRepository {
     Optional<List<Folder>> findById(String id, String userId);
-    Optional<FolderResponse> deleteById(String id);
+    String deleteById(String id);
 
 }

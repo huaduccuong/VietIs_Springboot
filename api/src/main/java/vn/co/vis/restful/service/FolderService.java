@@ -9,5 +9,5 @@ import java.util.Optional;
 
 public interface FolderService {
     Optional<List<FolderResponse>> getFolder(String id, String userId);
-    Optional<FolderResponse> deleteFolder(String id);
+    String deleteFolder(String id);
 }

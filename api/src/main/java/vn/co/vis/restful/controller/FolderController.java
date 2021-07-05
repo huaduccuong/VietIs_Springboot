@@ -11,9 +11,9 @@ public class FolderController extends AbstractController<FolderService>{
     public ResponseEntity<?> getFolder(@PathVariable String id,@PathVariable String userId) {
         return response(service.getFolder(id,userId));
     }
-    @PostMapping(value = "/delete")
-    public ResponseEntity<?> deleteFolder(String id)
+    @PostMapping(value = "/delete/{id}")
+    public String deleteFolder(@PathVariable String id)
     {
-        return response(service.deleteFolder(id));
+        return service.deleteFolder(id);
     }
 }
