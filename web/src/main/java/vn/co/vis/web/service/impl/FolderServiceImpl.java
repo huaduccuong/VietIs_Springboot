@@ -1,7 +1,9 @@
 package vn.co.vis.web.service.impl;
 
 import org.springframework.stereotype.Service;
+import vn.co.vis.web.dto.request.FolderRequest;
 import vn.co.vis.web.dto.response.FolderResponse;
+import vn.co.vis.web.dto.response.LoginResponse;
 import vn.co.vis.web.dto.response.UserResponse;
 import vn.co.vis.web.service.AbstractService;
 import vn.co.vis.web.service.FolderService;
@@ -31,5 +33,11 @@ public class FolderServiceImpl extends AbstractService implements FolderService 
             return Optional.empty();
         }
         return Optional.of(response);
+    }
+
+    @Override
+    public String insertFolder(HttpServletRequest httpServletRequest, FolderRequest folderRequest) {
+        FolderResponse response = apiExchangeService.post(httpServletRequest, backApiUrl + "/folder/insert", folderRequest, FolderResponse.class);
+        return "insert succesful";
     }
 }

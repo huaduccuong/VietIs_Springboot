@@ -2,12 +2,16 @@ package vn.co.vis.web.controller;
 
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
+import vn.co.vis.web.dto.request.FolderRequest;
 import vn.co.vis.web.dto.request.LoginRequest;
 import vn.co.vis.web.dto.response.LoginResponse;
 import vn.co.vis.web.service.FolderService;
 import vn.co.vis.web.service.UserService;
 
 import javax.servlet.http.HttpServletRequest;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Optional;
 
 @RestController
@@ -18,18 +22,28 @@ public class FolderController extends AbstractController<FolderService>{
                                  @RequestParam(name = "user-id") String userId) {
         ModelAndView modelAndView = new ModelAndView("folder");
         modelAndView.addObject("folderInfo", service.getFolder(httpServletRequest, idFolder,userId).get());
-        modelAndView.addObject("test","haha");
         return modelAndView;
     }
 
-//    @PostMapping(value = "/insert")
-//    public ModelAndView insertFolder(HttpServletRequest httpServletRequest, @RequestParam(name = "id") String idFolder,
-//                                   @RequestParam(name = "user-id") String userId) {
-//        ModelAndView modelAndView = new ModelAndView("folder");
-//        modelAndView.addObject("folderInfo", service.getFolder(httpServletRequest, idFolder,userId).get());
-//        modelAndView.addObject("test","haha");
-//        return modelAndView;
-//    }
+    @PostMapping(value = "/insert")
+    public ModelAndView insertFolder(HttpServletRequest httpServletRequest) throws ParseException {
+
+//        Date date1=new SimpleDateFormat("yyyy-mm-dd").parse(httpServletRequest.getParameter("folderDate"));
+//
+//        FolderRequest folderRequest  = new FolderRequest();
+//        folderRequest.setName(httpServletRequest.getParameter("folderName"));
+//        folderRequest.setFolderId(Integer.parseInt(httpServletRequest.getParameter("parentFolderId")));
+//        folderRequest.setUserId(Integer.parseInt(httpServletRequest.getParameter("userId")));
+//        folderRequest.setDate(date1);
+        // insert thư mục
+
+
+        ModelAndView modelAndView = new ModelAndView("folder");
+        modelAndView.addObject("folderInfo", service.getFolder(httpServletRequest,
+                httpServletRequest.getParameter("parentFolderId"),
+                httpServletRequest.getParameter("userId")));
+        return modelAndView;
+    }
     @GetMapping(value = "/insert")
     public ModelAndView insertFolder( @RequestParam(name = "id-folder-parent") String idParentFolder,
                                       @RequestParam(name = "id-user") String idUser) {
