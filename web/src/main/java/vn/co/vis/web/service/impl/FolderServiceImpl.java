@@ -22,4 +22,14 @@ public class FolderServiceImpl extends AbstractService implements FolderService 
         }
         return Optional.of(Arrays.asList(responses));
     }
+
+    @Override
+    public Optional<FolderResponse> deleteFolder(HttpServletRequest httpServletRequest,String id) {
+        FolderResponse response
+                = apiExchangeService.get(httpServletRequest, apiExchangeService.createURL(backApiUrl, "/folder/delete",id), FolderResponse.class);
+        if (response == null) {
+            return Optional.empty();
+        }
+        return Optional.of(response);
+    }
 }

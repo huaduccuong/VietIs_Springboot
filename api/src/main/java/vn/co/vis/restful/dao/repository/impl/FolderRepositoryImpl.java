@@ -21,4 +21,19 @@ public class FolderRepositoryImpl extends AbstractRepository implements FolderRe
         List<Folder> folders = jdbcTemplate.query(sql.toString(), new String[]{id, userId}, new BeanPropertyRowMapper<>(Folder.class));
         return Optional.ofNullable(folders);
     }
+
+    @Override
+    public String deleteById(String id) {
+        StringBuilder sql = new StringBuilder();
+        sql.append("DELETE ").append(attributeNamesForSelect(Folder.class));
+        sql.append(" FROM ").append(getSimpleNameTable(Folder.class));
+        sql.append(" WHERE id = ?");
+        jdbcTemplate.update(sql.toString(),id);
+        return "Delete success";
+    }
+
+    @Override
+    public String updateById(String id, String name) {
+        return null;
+    }
 }

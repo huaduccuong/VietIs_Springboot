@@ -4,6 +4,9 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.client.RestTemplate;
+import org.springframework.web.multipart.MultipartResolver;
+import org.springframework.web.multipart.commons.CommonsMultipartResolver;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 /**
  * Common configurations
@@ -11,7 +14,7 @@ import org.springframework.web.client.RestTemplate;
  */
 @Configuration
 @ComponentScan
-public class ApplicationConfig {
+public class ApplicationConfig implements WebMvcConfigurer {
 
     /**
      * Config RestTemplate.
@@ -23,5 +26,9 @@ public class ApplicationConfig {
         return new RestTemplate();
     }
 
-
+    @Bean
+    public CommonsMultipartResolver multipartResolver() {
+        CommonsMultipartResolver multipartResolver = new CommonsMultipartResolver();
+        return multipartResolver;
+    }
 }

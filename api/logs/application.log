@@ -89,3 +89,4 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 2021/07/03 14:59:13:938[ERROR] Failed to obtain JDBC Connection; nested exception is java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: NO)
 2021/07/03 15:04:19:384[ERROR] Failed to obtain JDBC Connection; nested exception is java.sql.SQLException: No suitable driver found for jdbc:mysql:Mysql@127.0.0.1:3306/test?serverTimezone=JST&useLegacyDatetimeCode=false&zeroDateTimeBehavior=convertToNull&useUnicode=yes&characterEncoding=UTF-8
 2021/07/03 15:05:11:157[ERROR] Failed to obtain JDBC Connection; nested exception is java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: NO)
+2021/07/05 08:26:45:524[ERROR] Failed to obtain JDBC Connection; nested exception is java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: NO)

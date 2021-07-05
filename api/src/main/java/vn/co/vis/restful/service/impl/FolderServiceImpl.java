@@ -3,11 +3,8 @@ package vn.co.vis.restful.service.impl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import vn.co.vis.restful.dao.entity.Folder;
-import vn.co.vis.restful.dao.entity.User;
 import vn.co.vis.restful.dao.repository.FolderRepository;
-import vn.co.vis.restful.dao.repository.UserRepository;
 import vn.co.vis.restful.dto.response.FolderResponse;
-import vn.co.vis.restful.dto.response.UserResponse;
 import vn.co.vis.restful.exception.ResourceNotFoundException;
 import vn.co.vis.restful.service.AbstractService;
 import vn.co.vis.restful.service.FolderService;
@@ -30,5 +27,11 @@ public class FolderServiceImpl  extends AbstractService implements FolderService
                         folder.getName(),folder.getDate(),
                         folder.getFolderId(),folder.getUserId()))
                 .collect(Collectors.toList()));
+    }
+
+    @Override
+    public Optional<FolderResponse> deleteFolder(String id) {
+        Optional<FolderResponse>  folderResponse = folderRepository.deleteById(id);
+        return folderResponse ;
     }
 }
