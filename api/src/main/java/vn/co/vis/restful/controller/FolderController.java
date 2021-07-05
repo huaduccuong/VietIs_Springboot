@@ -16,4 +16,5 @@ public class FolderController extends AbstractController<FolderService>{
     {
         return service.deleteFolder(id);
     }
+    @PostMapping(value = "/insert")
 }

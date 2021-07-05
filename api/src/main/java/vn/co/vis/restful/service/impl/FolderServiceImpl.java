@@ -23,7 +23,7 @@ public class FolderServiceImpl  extends AbstractService implements FolderService
             throw new ResourceNotFoundException();
         });
         return Optional.of(folders.stream()
-                .map(folder -> new FolderResponse(folder.getFolderId(),
+                .map(folder -> new FolderResponse(folder.getId(),
                         folder.getName(),folder.getDate(),
                         folder.getFolderId(),folder.getUserId()))
                 .collect(Collectors.toList()));
@@ -31,6 +31,7 @@ public class FolderServiceImpl  extends AbstractService implements FolderService
 
     @Override
     public String deleteFolder(String id) {
+        System.out.println("hi");
         String  folderResponse = folderRepository.deleteById(id);
         return folderResponse ;
     }

@@ -7,32 +7,30 @@
 <body>
 
 <table>
-    <h1 th:text="${test}"></h1>
-    <tr th:each="folder : ${folderInfo}">
-<!--        <img th:src="@{/img/unnamed.jpg}" th:width="40" th:height="40">-->
+<!--    <h1 th:text="${test}"></h1>-->
+    <tr th:each="folder,index : ${folderInfo}">
             <td>
-                    <img th:src="@{/img/anhfolder.jpg}" th:width="40" th:height="40">
+                <a th:href="@{/folders/parent(id=${folder.id},user-id=${folder.getUserId()})}">
+                    <img alt="photo" title="Google login" th:src="@{/img/anhfolder.jpg}" th:width="40" th:height="40"/>
+                </a>
             </td>
             <td th:text="${folder.name}"> </td>
             <td th:text="${folder.date}"> </td>
+
+        <div th:if="${index.count==folderInfo.size()}">
+            <a th:href="@{/folders/insert(id-folder-parent=${folder.getFolderId()},id-user=${folder.getUserId()})}">
+                <img alt="photo" title="Google login" th:src="@{/img/add.png}" th:width="40" th:height="40"/>
+            </a>
+
+
+            <form th:action="@{/upload}" method="post" enctype="multipart/form-data" >
+                <table>
+                    <tr><td>File to upload:</td><td><input type="file" name="file" /></td></tr>
+                    <tr><td></td><td><input type="submit" value="Upload" /></td></tr>
+                </table>
+            </form>
+        </div>
     </tr>
-    <div>
-        <form th:action="@{/upload}" method="post" enctype="multipart/form-data" >
-            <table>
-                <tr><td>File to upload:</td><td><input type="file" name="file" /></td></tr>
-                <tr><td></td><td><input type="submit" value="Upload" /></td></tr>
-            </table>
-        </form>
-    </div>
-
-
-<!--    <form th:action="@{/upload}" method="post">-->
-<!--        <label for="userName">User name:</label>-->
-<!--        <input type="text" id="userName" name="userName"><br><br>-->
-<!--        <label for="password">Password:</label>-->
-<!--        <input type="password" id="password" name="password"><br><br>-->
-<!--        <input type="submit" value="Submit">-->
-<!--    </form>-->
 
 </table>
 </body>
