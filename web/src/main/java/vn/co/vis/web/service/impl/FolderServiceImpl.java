@@ -37,7 +37,7 @@ public class FolderServiceImpl extends AbstractService implements FolderService 
 
     @Override
     public String insertFolder(HttpServletRequest httpServletRequest, FolderRequest folderRequest) {
-        FolderResponse response = apiExchangeService.post(httpServletRequest, backApiUrl + "/folder/insert", folderRequest, FolderResponse.class);
+         apiExchangeService.post(httpServletRequest, backApiUrl + "/folder/insert", folderRequest, FolderResponse.class);
         return "insert succesful";
     }
 }

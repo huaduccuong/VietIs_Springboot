@@ -28,20 +28,21 @@ public class FolderController extends AbstractController<FolderService>{
     @PostMapping(value = "/insert")
     public ModelAndView insertFolder(HttpServletRequest httpServletRequest) throws ParseException {
 
-//        Date date1=new SimpleDateFormat("yyyy-mm-dd").parse(httpServletRequest.getParameter("folderDate"));
-//
-//        FolderRequest folderRequest  = new FolderRequest();
-//        folderRequest.setName(httpServletRequest.getParameter("folderName"));
-//        folderRequest.setFolderId(Integer.parseInt(httpServletRequest.getParameter("parentFolderId")));
-//        folderRequest.setUserId(Integer.parseInt(httpServletRequest.getParameter("userId")));
-//        folderRequest.setDate(date1);
+        Date date1=new SimpleDateFormat("yyyy-mm-dd").parse(httpServletRequest.getParameter("folderDate"));
+
+        FolderRequest folderRequest  = new FolderRequest();
+        folderRequest.setName(httpServletRequest.getParameter("folderName"));
+        folderRequest.setFolderId(Integer.parseInt(httpServletRequest.getParameter("parentFolderId")));
+        folderRequest.setUserId(Integer.parseInt(httpServletRequest.getParameter("userId")));
+        folderRequest.setDate(date1);
         // insert thư mục
+        service.insertFolder(httpServletRequest,folderRequest);
 
 
         ModelAndView modelAndView = new ModelAndView("folder");
         modelAndView.addObject("folderInfo", service.getFolder(httpServletRequest,
                 httpServletRequest.getParameter("parentFolderId"),
-                httpServletRequest.getParameter("userId")));
+                httpServletRequest.getParameter("userId")).get());
         return modelAndView;
     }
     @GetMapping(value = "/insert")

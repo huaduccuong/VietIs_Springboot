@@ -1,4 +1,5 @@
-password.directory: C:\Users\cuonghd\Documents\GitHub\VietIs_Springboot\api\src\main\resources\pwd
+#password.directory: C:\Users\cuonghd\Documents\GitHub\VietIs_Springboot\api\src\main\resources\pwd
+password.directory: E:\VIET_IS\ProjectGit\VietIs_Springboot\api\src\main\resources\pwd
 
 database:
   url: jdbc:mysql://localhost:3306/test?serverTimezone=JST&useLegacyDatetimeCode=false&zeroDateTimeBehavior=convertToNull&useUnicode=yes&characterEncoding=UTF-8

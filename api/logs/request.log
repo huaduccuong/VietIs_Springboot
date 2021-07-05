@@ -1077,3 +1077,149 @@
 2021/07/05 17:25:09:336[INFO]  Response=[{"id":1,"name":"root","date":"2021-01-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1}]
 2021/07/05 17:25:14:730[INFO][logID]  Request http://localhost:8080/api/folder/1/1
 2021/07/05 17:25:14:730[INFO]  Response=[{"id":1,"name":"root","date":"2021-01-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1}]
+2021/07/05 22:27:21:071[INFO][logID]  Request http://localhost:8080/api/login Payload={"userName":"1","password":"1"}
+2021/07/05 22:27:21:072[INFO]  Response={"errorCode":"E0","message":"Failed to obtain JDBC Connection; nested exception is java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: NO)"}
+2021/07/05 22:28:11:468[INFO][logID]  Request http://localhost:8080/api/login Payload={"userName":"1","password":"1"}
+2021/07/05 22:28:11:472[INFO]  Response={"id":"1","firstName":"a","lastName":"b","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjU0OTg4OTEsImV4cCI6MTYyNTU4NTI5MX0.pzhh3-8tuxXZ5k109k33xKdgJlDYqYVhGlZdss1BVDY"}
+2021/07/05 22:28:11:518[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/05 22:28:11:519[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1}]
+2021/07/05 22:28:13:883[INFO][logID]  Request http://localhost:8080/api/folder/2/1
+2021/07/05 22:28:13:883[INFO]  Response=[{"id":3,"name":"child1","date":"2021-02-01T15:00:00.000+00:00","folderId":2,"userId":1},{"id":4,"name":"child2","date":"2021-02-02T15:00:00.000+00:00","folderId":2,"userId":1}]
+2021/07/05 22:28:16:187[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/05 22:28:16:188[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1}]
+2021/07/05 22:28:17:022[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/05 22:28:17:022[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1}]
+2021/07/05 22:28:18:062[INFO][logID]  Request http://localhost:8080/api/folder/2/1
+2021/07/05 22:28:18:062[INFO]  Response=[{"id":3,"name":"child1","date":"2021-02-01T15:00:00.000+00:00","folderId":2,"userId":1},{"id":4,"name":"child2","date":"2021-02-02T15:00:00.000+00:00","folderId":2,"userId":1}]
+2021/07/05 22:28:19:423[INFO][logID]  Request http://localhost:8080/api/folder/3/1
+2021/07/05 22:28:19:423[INFO]  Response=[]
+2021/07/05 22:28:20:311[INFO][logID]  Request http://localhost:8080/api/folder/2/1
+2021/07/05 22:28:20:312[INFO]  Response=[{"id":3,"name":"child1","date":"2021-02-01T15:00:00.000+00:00","folderId":2,"userId":1},{"id":4,"name":"child2","date":"2021-02-02T15:00:00.000+00:00","folderId":2,"userId":1}]
+2021/07/05 22:28:20:952[INFO][logID]  Request http://localhost:8080/api/folder/4/1
+2021/07/05 22:28:20:952[INFO]  Response=[]
+2021/07/05 22:28:21:634[INFO][logID]  Request http://localhost:8080/api/folder/2/1
+2021/07/05 22:28:21:634[INFO]  Response=[{"id":3,"name":"child1","date":"2021-02-01T15:00:00.000+00:00","folderId":2,"userId":1},{"id":4,"name":"child2","date":"2021-02-02T15:00:00.000+00:00","folderId":2,"userId":1}]
+2021/07/05 22:28:22:786[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/05 22:28:22:787[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1}]
+2021/07/05 22:28:40:821[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/05 22:28:40:821[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1}]
+2021/07/05 22:31:22:684[INFO][logID]  Request http://localhost:8080/api/login Payload={"userName":"1","password":"1"}
+2021/07/05 22:31:22:685[INFO]  Response={"id":"1","firstName":"a","lastName":"b","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjU0OTkwODIsImV4cCI6MTYyNTU4NTQ4Mn0.0reG23onLATxBjldSUOuEOKvoyaf9BT8Xp6Y4QTj3eU"}
+2021/07/05 22:31:22:718[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/05 22:31:22:719[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1}]
+2021/07/05 22:31:29:204[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/05 22:31:29:204[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1}]
+2021/07/05 22:31:31:723[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/05 22:31:31:723[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1}]
+2021/07/05 22:31:32:580[INFO][logID]  Request http://localhost:8080/api/folder/2/1
+2021/07/05 22:31:32:580[INFO]  Response=[{"id":3,"name":"child1","date":"2021-02-01T15:00:00.000+00:00","folderId":2,"userId":1},{"id":4,"name":"child2","date":"2021-02-02T15:00:00.000+00:00","folderId":2,"userId":1}]
+2021/07/05 22:31:35:835[INFO][logID]  Request http://localhost:8080/api/folder/2/1
+2021/07/05 22:31:35:835[INFO]  Response=[{"id":3,"name":"child1","date":"2021-02-01T15:00:00.000+00:00","folderId":2,"userId":1},{"id":4,"name":"child2","date":"2021-02-02T15:00:00.000+00:00","folderId":2,"userId":1}]
+2021/07/05 22:35:00:616[INFO][logID]  Request http://localhost:8080/api/folder/2/1
+2021/07/05 22:35:00:616[INFO]  Response=[{"id":3,"name":"child1","date":"2021-02-01T15:00:00.000+00:00","folderId":2,"userId":1},{"id":4,"name":"child2","date":"2021-02-02T15:00:00.000+00:00","folderId":2,"userId":1}]
+2021/07/05 22:35:13:191[INFO][logID]  Request http://localhost:8080/api/folder/2/1
+2021/07/05 22:35:13:192[INFO]  Response=[{"id":3,"name":"child1","date":"2021-02-01T15:00:00.000+00:00","folderId":2,"userId":1},{"id":4,"name":"child2","date":"2021-02-02T15:00:00.000+00:00","folderId":2,"userId":1}]
+2021/07/05 22:47:41:127[INFO][logID]  Request http://localhost:8080/api/login Payload={"userName":"1","password":"1"}
+2021/07/05 22:47:41:127[INFO]  Response={"id":"1","firstName":"a","lastName":"b","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjU1MDAwNjEsImV4cCI6MTYyNTU4NjQ2MX0.wVTAQ_89D3JGqQ8se6xqwFNppUttqoczWeyyf2MiHys"}
+2021/07/05 22:48:04:777[INFO][logID]  Request http://localhost:8080/api/login Payload={"userName":"1","password":"1"}
+2021/07/05 22:48:04:780[INFO]  Response={"id":"1","firstName":"a","lastName":"b","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjU1MDAwODQsImV4cCI6MTYyNTU4NjQ4NH0.5_ndcmYemrae19wareQNc2WkGir9lp3mKxIDCJN4WBI"}
+2021/07/05 22:48:04:826[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/05 22:48:04:826[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1}]
+2021/07/05 22:48:15:037[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/05 22:48:15:037[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1}]
+2021/07/05 22:49:25:442[INFO][logID]  Request http://localhost:8080/api/login Payload={"userName":"1","password":"1"}
+2021/07/05 22:49:25:443[INFO]  Response={"id":"1","firstName":"a","lastName":"b","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjU1MDAxNjUsImV4cCI6MTYyNTU4NjU2NX0.VrT4zTzWqQJ0nOJIzPYbMyW3rpstc5majJBVnRiNK0Q"}
+2021/07/05 22:49:25:480[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/05 22:49:25:480[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1}]
+2021/07/05 22:49:30:507[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/05 22:49:30:508[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1}]
+2021/07/05 22:51:40:433[INFO][logID]  Request http://localhost:8080/api/login Payload={"userName":"1","password":"1"}
+2021/07/05 22:51:40:433[INFO]  Response={"id":"1","firstName":"a","lastName":"b","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjU1MDAzMDAsImV4cCI6MTYyNTU4NjcwMH0.XoPvfwX6gVgtsJ7TdmD3BI6AvjHI-o52fu9oKMgPpsg"}
+2021/07/05 22:51:40:468[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/05 22:51:40:469[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1}]
+2021/07/05 22:51:45:236[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/05 22:51:45:237[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1}]
+2021/07/05 22:58:55:672[INFO][logID]  Request http://localhost:8080/api/login Payload={"userName":"1","password":"1"}
+2021/07/05 22:58:55:672[INFO]  Response={"id":"1","firstName":"a","lastName":"b","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjU1MDA3MzUsImV4cCI6MTYyNTU4NzEzNX0.xX3EB6EJMqo8_Ht6H4uDxqT4TgkggFAHxDJIAAPhBMA"}
+2021/07/05 22:58:55:707[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/05 22:58:55:708[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1}]
+2021/07/05 23:02:39:989[INFO][logID]  Request http://localhost:8080/api/login Payload={"userName":"1","password":"1"}
+2021/07/05 23:02:39:989[INFO]  Response={"id":"1","firstName":"a","lastName":"b","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjU1MDA5NTksImV4cCI6MTYyNTU4NzM1OX0.qJGuSemQYnbX6nC16u8cCu2HjIl0z1PmSkGBLkHGEF4"}
+2021/07/05 23:02:40:024[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/05 23:02:40:025[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1}]
+2021/07/05 23:02:45:899[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/05 23:02:45:900[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1}]
+2021/07/05 23:04:16:081[INFO][logID]  Request http://localhost:8080/api/login Payload={"userName":"1","password":"1"}
+2021/07/05 23:04:16:081[INFO]  Response={"id":"1","firstName":"a","lastName":"b","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjU1MDEwNTYsImV4cCI6MTYyNTU4NzQ1Nn0.eExcex6YZGEizyA1Y2pmMe1z_XRG60TipBA_5QdBTEM"}
+2021/07/05 23:04:16:116[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/05 23:04:16:116[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1}]
+2021/07/05 23:04:22:458[INFO][logID]  Request http://localhost:8080/api/folder/insert Payload={"id":0,"name":"cuong","date":1609520520000,"folderId":1,"userId":1}
+2021/07/05 23:04:22:458[INFO]  Response={"errorCode":"E0","message":"PreparedStatementCallback; bad SQL grammar [INSERT id,name,date,folder_id,user_idINTO folderVALUES (?, ?,?,?)]; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ',name,date,folder_id,user_idINTO folderVALUES ('cuong', '2021-01-02 02:02:00.0',' at line 1"}
+2021/07/05 23:05:19:387[INFO][logID]  Request http://localhost:8080/api/login Payload={"userName":"1","password":"1"}
+2021/07/05 23:05:19:387[INFO]  Response={"id":"1","firstName":"a","lastName":"b","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjU1MDExMTksImV4cCI6MTYyNTU4NzUxOX0.p0L2kikf7Ic4CB4I14r0ln7bp_b_94w0p6T6YxzZpek"}
+2021/07/05 23:05:19:421[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/05 23:05:19:421[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1}]
+2021/07/05 23:12:21:524[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/05 23:12:21:524[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1}]
+2021/07/05 23:13:42:552[INFO][logID]  Request http://localhost:8080/api/error
+2021/07/05 23:13:42:552[INFO]  Response={"timestamp":"2021-07-05T16:13:42.549+00:00","status":500,"error":"Internal Server Error","message":"","path":"/api/folder/insert"}
+2021/07/05 23:26:35:256[INFO][logID]  Request http://localhost:8080/api/error
+2021/07/05 23:26:35:256[INFO]  Response={"timestamp":"2021-07-05T16:26:35.232+00:00","status":500,"error":"Internal Server Error","message":"","path":"/api/folder/insert"}
+2021/07/05 23:26:36:728[INFO][logID]  Request http://localhost:8080/api/error
+2021/07/05 23:26:36:728[INFO]  Response={"timestamp":"2021-07-05T16:26:36.727+00:00","status":500,"error":"Internal Server Error","message":"","path":"/api/folder/insert"}
+2021/07/05 23:26:37:357[INFO][logID]  Request http://localhost:8080/api/error
+2021/07/05 23:26:37:357[INFO]  Response={"timestamp":"2021-07-05T16:26:37.356+00:00","status":500,"error":"Internal Server Error","message":"","path":"/api/folder/insert"}
+2021/07/05 23:26:38:885[INFO][logID]  Request http://localhost:8080/api/error
+2021/07/05 23:26:38:886[INFO]  Response={"timestamp":"2021-07-05T16:26:38.884+00:00","status":500,"error":"Internal Server Error","message":"","path":"/api/folder/insert"}
+2021/07/05 23:27:04:074[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/05 23:27:04:075[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1}]
+2021/07/05 23:28:12:776[INFO][logID]  Request http://localhost:8080/api/folder/insert Payload={"id":0,"name":"cuong","date":1609520520000,"folderId":1,"userId":1}
+2021/07/05 23:28:12:776[INFO]  Response={"errorCode":"E0","message":"PreparedStatementCallback; bad SQL grammar [insert into id,name,date,folder_id,user_id(name,date,folder_id,user_id) values (?,?,?,?)]; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ',name,date,folder_id,user_id(name,date,folder_id,user_id) values ('cuong','2021-' at line 1"}
+2021/07/05 23:28:26:502[INFO][logID]  Request http://localhost:8080/api/login Payload={"userName":"1","password":"1"}
+2021/07/05 23:28:26:506[INFO]  Response={"id":"1","firstName":"a","lastName":"b","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjU1MDI1MDYsImV4cCI6MTYyNTU4ODkwNn0.85eSrzi89CWkjnSBP5_iNuBXrhMFtn8yklHua9J-lQI"}
+2021/07/05 23:28:26:553[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/05 23:28:26:553[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1}]
+2021/07/05 23:28:30:774[INFO][logID]  Request http://localhost:8080/api/folder/insert Payload={"id":0,"name":"cuong","date":1609520520000,"folderId":1,"userId":1}
+2021/07/05 23:28:30:774[INFO]  Response={"errorCode":"E0","message":"PreparedStatementCallback; bad SQL grammar [insert into id,name,date,folder_id,user_id(name,date,folder_id,user_id) values (?,?,?,?)]; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ',name,date,folder_id,user_id(name,date,folder_id,user_id) values ('cuong','2021-' at line 1"}
+2021/07/05 23:30:04:820[INFO][logID]  Request http://localhost:8080/api/login Payload={"userName":"1","password":"1"}
+2021/07/05 23:30:04:824[INFO]  Response={"id":"1","firstName":"a","lastName":"b","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjU1MDI2MDQsImV4cCI6MTYyNTU4OTAwNH0.4J_okp0YQGdTk8gxziaYaMzM5DKYfkdeN7LLYZbNqOI"}
+2021/07/05 23:30:04:851[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/05 23:30:04:852[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1}]
+2021/07/05 23:30:08:216[INFO][logID]  Request http://localhost:8080/api/folder/insert Payload={"id":0,"name":"cuong","date":1609520520000,"folderId":1,"userId":1}
+2021/07/05 23:30:08:216[INFO]  Response=insert success
+2021/07/05 23:31:48:953[INFO][logID]  Request http://localhost:8080/api/login Payload={"userName":"1","password":"1"}
+2021/07/05 23:31:48:953[INFO]  Response={"id":"1","firstName":"a","lastName":"b","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjU1MDI3MDgsImV4cCI6MTYyNTU4OTEwOH0.HRUq773o14wA2e0B5qQwwK4erELeEF_GFVxYns8BtW4"}
+2021/07/05 23:31:48:986[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/05 23:31:48:987[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1},{"id":5,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}]
+2021/07/05 23:31:52:186[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/05 23:31:52:186[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1},{"id":5,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}]
+2021/07/05 23:32:48:829[INFO][logID]  Request http://localhost:8080/api/login Payload={"userName":"1","password":"1"}
+2021/07/05 23:32:48:829[INFO]  Response={"id":"1","firstName":"a","lastName":"b","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjU1MDI3NjgsImV4cCI6MTYyNTU4OTE2OH0.P3S51lKkFJDe4GHuiVCPE2_ni760wKcR5FA9u3yQ1uo"}
+2021/07/05 23:32:48:862[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/05 23:32:48:862[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1},{"id":5,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}]
+2021/07/05 23:32:55:323[INFO][logID]  Request http://localhost:8080/api/folder/insert Payload={"id":0,"name":"haha","date":1609520520000,"folderId":1,"userId":1}
+2021/07/05 23:32:55:324[INFO]  Response=insert success
+2021/07/05 23:34:51:206[INFO][logID]  Request http://localhost:8080/api/error
+2021/07/05 23:34:51:207[INFO]  Response={"timestamp":"2021-07-05T16:34:51.204+00:00","status":500,"error":"Internal Server Error","message":"","path":"/api/folder/insert"}
+2021/07/05 23:47:50:148[INFO][logID]  Request http://localhost:8080/api/login Payload={"userName":"1","password":"1"}
+2021/07/05 23:47:50:149[INFO]  Response={"id":"1","firstName":"a","lastName":"b","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjU1MDM2NzAsImV4cCI6MTYyNTU5MDA3MH0.UpxM4n8x04xqtT6k2NQXuNgIm9BTJrZbQI-LvLdVbb0"}
+2021/07/05 23:47:50:185[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/05 23:47:50:185[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1},{"id":5,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1},{"id":6,"name":"haha","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}]
+2021/07/05 23:47:56:954[INFO][logID]  Request http://localhost:8080/api/folder/insert Payload={"id":0,"name":"cuongdsad","date":1609520520000,"folderId":1,"userId":1}
+2021/07/05 23:47:56:954[INFO]  Response=insert success
+2021/07/05 23:50:22:605[INFO][logID]  Request http://localhost:8080/api/login Payload={"userName":"1","password":"1"}
+2021/07/05 23:50:22:605[INFO]  Response={"id":"1","firstName":"a","lastName":"b","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjU1MDM4MjIsImV4cCI6MTYyNTU5MDIyMn0.6R4k6vVmgxsJ3vf-dHgBqQtEzyyM4JD-sXYI0ChDs2w"}
+2021/07/05 23:50:22:641[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/05 23:50:22:641[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1},{"id":5,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1},{"id":6,"name":"haha","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1},{"id":7,"name":"cuongdsad","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}]
+2021/07/05 23:50:30:203[INFO][logID]  Request http://localhost:8080/api/folder/insert Payload={"id":0,"name":"cuong","date":1609520520000,"folderId":1,"userId":1}
+2021/07/05 23:50:30:203[INFO]  Response=insert success
+2021/07/05 23:53:50:278[INFO][logID]  Request http://localhost:8080/api/login Payload={"userName":"1","password":"1"}
+2021/07/05 23:53:50:281[INFO]  Response={"id":"1","firstName":"a","lastName":"b","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjU1MDQwMzAsImV4cCI6MTYyNTU5MDQzMH0.cR9yDiQ2N5gfZj58XdkOgXwd6vlDbhGoG3QSDEMApp4"}
+2021/07/05 23:53:50:330[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/05 23:53:50:330[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1},{"id":5,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1},{"id":6,"name":"haha","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1},{"id":7,"name":"cuongdsad","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1},{"id":8,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}]
+2021/07/05 23:54:53:696[INFO][logID]  Request http://localhost:8080/api/login Payload={"userName":"1","password":"1"}
+2021/07/05 23:54:53:697[INFO]  Response={"id":"1","firstName":"a","lastName":"b","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjU1MDQwOTMsImV4cCI6MTYyNTU5MDQ5M30.IwoyEm6z940j3btrwbIz9XMLhuaRYx8VE_6LJgmq1ck"}
+2021/07/05 23:54:53:717[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/05 23:54:53:717[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1},{"id":5,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1},{"id":6,"name":"haha","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1},{"id":7,"name":"cuongdsad","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1},{"id":8,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}]
+2021/07/05 23:54:55:222[INFO][logID]  Request http://localhost:8080/api/folder/2/1
+2021/07/05 23:54:55:223[INFO]  Response=[{"id":3,"name":"child1","date":"2021-02-01T15:00:00.000+00:00","folderId":2,"userId":1},{"id":4,"name":"child2","date":"2021-02-02T15:00:00.000+00:00","folderId":2,"userId":1}]
