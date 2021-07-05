@@ -34,5 +34,15 @@ public class FolderRepositoryImpl extends AbstractRepository implements FolderRe
         return  "delete success";
     }
 
+    @Override
+    public String insert(Folder folder) {
+        StringBuilder sql = new StringBuilder();
+        sql.append("INSERT ").append(attributeNamesForSelect(Folder.class));
+        sql.append("INTO ").append(getSimpleNameTable(Folder.class));
+        sql.append("VALUES (?, ?,?,?)");
+        jdbcTemplate.update(sql.toString(),folder.getName(),folder.getDate(),folder.getFolderId(),folder.getUserId());
+        return  "insert success";
+    }
+
 
 }

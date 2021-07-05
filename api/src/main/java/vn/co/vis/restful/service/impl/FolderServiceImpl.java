@@ -35,4 +35,10 @@ public class FolderServiceImpl  extends AbstractService implements FolderService
         String  folderResponse = folderRepository.deleteById(id);
         return folderResponse ;
     }
+
+    @Override
+    public String insertFolder(Folder folder) {
+        String  folderResponse = folderRepository.insert(folder);
+        return folderResponse ;
+    }
 }
