@@ -8,10 +8,11 @@ import java.util.List;
 import java.util.Optional;
 
 public interface FolderRepository {
-    Optional<List<Folder>> findById(String id, String userId);
+    Optional<List<Folder>> findByIdParentFolder(String id, String userId);
     String deleteById(String id);
     Optional<FolderResponse> insert(Folder folder);
     Optional<FolderResponse> update(String id, Folder folder);
+    Optional<FolderResponse> findById(String id);
 
 
 }

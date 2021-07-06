@@ -3,6 +3,7 @@ package vn.co.vis.restful.dao.repository.impl;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.stereotype.Repository;
 import vn.co.vis.restful.dao.entity.Folder;
+import vn.co.vis.restful.dao.entity.User;
 import vn.co.vis.restful.dao.repository.AbstractRepository;
 import vn.co.vis.restful.dao.repository.FolderRepository;
 import vn.co.vis.restful.dto.response.FolderResponse;
@@ -15,7 +16,7 @@ import java.util.Optional;
 @Repository
 public class FolderRepositoryImpl extends AbstractRepository implements FolderRepository {
     @Override
-    public Optional<List<Folder>> findById(String id, String userId) {
+    public Optional<List<Folder>> findByIdParentFolder(String id, String userId) {
         StringBuilder sql = new StringBuilder();
         sql.append("SELECT ").append(attributeNamesForSelect(Folder.class));
         sql.append(" FROM ").append(getSimpleNameTable(Folder.class));
@@ -68,6 +69,16 @@ public class FolderRepositoryImpl extends AbstractRepository implements FolderRe
         folderResponse.setName(folder.getName());
         folderResponse.setDate(folder.getDate());
         return  Optional.ofNullable(folderResponse);
+    }
+
+    @Override
+    public Optional<FolderResponse> findById(String id) {
+        StringBuilder sql = new StringBuilder();
+        sql.append("SELECT ").append(attributeNamesForSelect(Folder.class));
+        sql.append(" FROM ").append(getSimpleNameTable(Folder.class));
+        sql.append(" WHERE id = ?");
+        FolderResponse folderResponse = jdbcTemplate.queryForObject(sql.toString(), new String[]{id}, new BeanPropertyRowMapper<>(FolderResponse.class));
+        return Optional.ofNullable(folderResponse);
     }
 
 

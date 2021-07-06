@@ -13,8 +13,12 @@ import java.util.Optional;
 @RequestMapping("/folder")
 public class FolderController extends AbstractController<FolderService>{
     @GetMapping(value = "/{id}/{userId}")
-    public ResponseEntity<?> getFolder(@PathVariable String id,@PathVariable String userId) {
-        return response(service.getFolder(id,userId));
+    public ResponseEntity<?> getFoldersById(@PathVariable String id,@PathVariable String userId) {
+        return response(service.getFoldersById(id,userId));
+    }
+    @GetMapping(value = "/{id}")
+    public ResponseEntity<?> getFolder(@PathVariable String id) {
+        return response(service.getFolder(id));
     }
     @DeleteMapping(value = "/{id}")
     public  ResponseEntity<?>  deleteFolder(@PathVariable String id)

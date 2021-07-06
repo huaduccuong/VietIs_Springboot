@@ -17,9 +17,16 @@ import java.util.stream.Collectors;
 public class FolderServiceImpl  extends AbstractService implements FolderService {
     @Autowired
     FolderRepository folderRepository;
+
     @Override
-    public Optional<List<FolderResponse>> getFolder(String id, String userId) {
-        List<Folder> folders = folderRepository.findById(id,userId).orElseThrow(() -> {
+    public Optional<FolderResponse> getFolder(String id) {
+        Optional<FolderResponse>  folderResponse = folderRepository.findById(id);
+        return folderResponse ;
+    }
+
+    @Override
+    public Optional<List<FolderResponse>> getFoldersById(String id, String userId) {
+        List<Folder> folders = folderRepository.findByIdParentFolder(id,userId).orElseThrow(() -> {
             throw new ResourceNotFoundException();
         });
         return Optional.of(folders.stream()

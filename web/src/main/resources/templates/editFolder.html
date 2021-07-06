@@ -5,19 +5,25 @@
   <title>Login page</title>
 </head>
 <body>
-<form th:action="@{/folders/insert}" method="post">
+<form th:action="@{/folders/edit}" method="post">
   <label>Folder Name:</label>
-  <input type="text"  name="folderName" value=""><br><br>
+  <input type="text"  name="folderName" th:value="${folderName}"><br><br>
+
+  <input type="hidden"  name="folderId" th:value="${folderId}">
 
   <label>Folder date:</label>
-  <input type="text" name="folderDate" value=""><br><br>
+  <input type="text" name="folderDate" th:value="${folderDateCreated}"><br><br>
 
   <label>Parent Folder_Id:</label>
 
   <input type="text" name="parentFolderId" th:value="${idParentFolder}"><br><br>
   <label>User_Id:</label>
   <input type="text" name="userId"  th:value="${idUser}"><br><br>
-  <input type="submit" value="Save">
+<!--  <input type="submit" value="Save">-->
+
+  <button type="submit" name="action" value="create">Create</button>
+  <button type="submit" name="action" value="update">Update</button>
+
 </form>
 </body>
 </html>

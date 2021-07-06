@@ -1721,3 +1721,341 @@
 2021/07/06 17:25:22:386[INFO]  Response={"id":0,"name":"parent2","date":"2021-01-05T17:03:00.000+00:00","folderId":1,"userId":1}
 2021/07/06 17:25:22:702[INFO][logID]  Request http://localhost:8080/api/folder/1/1
 2021/07/06 17:25:22:702[INFO]  Response=[{"id":1,"name":"root","date":"2021-01-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1},{"id":12,"name":"parent2","date":"2021-01-05T17:03:00.000+00:00","folderId":1,"userId":1}]
+2021/07/06 21:16:17:408[INFO][logID]  Request http://localhost:8080/api/login Payload={"userName":"1","password":"1"}
+2021/07/06 21:16:17:411[INFO]  Response={"id":"1","firstName":"a","lastName":"b","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjU1ODA5NzcsImV4cCI6MTYyNTY2NzM3N30.JyBAxEn95HtnZQfbLl4RCP1AYs--lNLOjCCEQiJLT2E"}
+2021/07/06 21:16:27:152[INFO][logID]  Request http://localhost:8080/api/login Payload={"userName":"1","password":"1"}
+2021/07/06 21:16:27:153[INFO]  Response={"id":"1","firstName":"a","lastName":"b","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjU1ODA5ODcsImV4cCI6MTYyNTY2NzM4N30.Ttkv2Ro_PjobnK-vBuaQ5aR2vbPOm6RfVmMsiLgDJnY"}
+2021/07/06 21:16:27:188[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/06 21:16:27:188[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1},{"id":5,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1},{"id":6,"name":"haha","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1},{"id":7,"name":"cuongdsad","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1},{"id":8,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}]
+2021/07/06 21:16:37:706[INFO][logID]  Request http://localhost:8080/api/folder/8
+2021/07/06 21:16:37:707[INFO]  Response=delete success
+2021/07/06 21:16:37:719[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/06 21:16:37:720[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1},{"id":5,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1},{"id":6,"name":"haha","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1},{"id":7,"name":"cuongdsad","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}]
+2021/07/06 21:16:38:739[INFO][logID]  Request http://localhost:8080/api/folder/7
+2021/07/06 21:16:38:739[INFO]  Response=delete success
+2021/07/06 21:16:38:752[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/06 21:16:38:752[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1},{"id":5,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1},{"id":6,"name":"haha","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}]
+2021/07/06 21:16:40:530[INFO][logID]  Request http://localhost:8080/api/folder/6
+2021/07/06 21:16:40:530[INFO]  Response=delete success
+2021/07/06 21:16:40:543[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/06 21:16:40:543[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1},{"id":5,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}]
+2021/07/06 21:16:55:859[INFO][logID]  Request http://localhost:8080/api/folder Payload={"id":0,"name":"parenr2","date":1609520520000,"folderId":1,"userId":1}
+2021/07/06 21:16:55:859[INFO]  Response={"id":0,"name":"parenr2","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}
+2021/07/06 21:16:55:871[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/06 21:16:55:871[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1},{"id":5,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1},{"id":9,"name":"parenr2","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}]
+2021/07/06 21:17:06:782[INFO][logID]  Request http://localhost:8080/api/folder/2/1
+2021/07/06 21:17:06:782[INFO]  Response=[{"id":3,"name":"child1","date":"2021-02-01T15:00:00.000+00:00","folderId":2,"userId":1},{"id":4,"name":"child2","date":"2021-02-02T15:00:00.000+00:00","folderId":2,"userId":1}]
+2021/07/06 21:17:18:017[INFO][logID]  Request http://localhost:8080/api/login Payload={"userName":"1","password":"1"}
+2021/07/06 21:17:18:017[INFO]  Response={"id":"1","firstName":"a","lastName":"b","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjU1ODEwMzgsImV4cCI6MTYyNTY2NzQzOH0.kzpwVGgK25_m51VWedT5vjU3ywwySjswU8EL310M-Ug"}
+2021/07/06 21:17:18:033[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/06 21:17:18:033[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1},{"id":5,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1},{"id":9,"name":"parenr2","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}]
+2021/07/06 21:17:41:143[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/06 21:17:41:143[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1},{"id":5,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1},{"id":9,"name":"parenr2","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}]
+2021/07/06 21:38:02:679[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/06 21:38:02:679[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1},{"id":5,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1},{"id":9,"name":"parenr2","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}]
+2021/07/06 21:43:15:514[INFO][logID]  Request http://localhost:8080/api/error
+2021/07/06 21:43:15:515[INFO]  Response={"timestamp":"2021-07-06T14:43:15.505+00:00","status":500,"error":"Internal Server Error","message":"","path":"/api/folder/1"}
+2021/07/06 21:43:34:433[INFO][logID]  Request http://localhost:8080/api/folder/1
+2021/07/06 21:43:34:440[INFO]  Response={"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1}
+2021/07/06 21:43:39:786[INFO][logID]  Request http://localhost:8080/api/folder/2
+2021/07/06 21:43:39:787[INFO]  Response={"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1}
+2021/07/06 22:11:03:680[INFO][logID]  Request http://localhost:8080/api/login Payload={"userName":"1","password":"1"}
+2021/07/06 22:11:03:680[INFO]  Response={"id":"1","firstName":"a","lastName":"b","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjU1ODQyNjMsImV4cCI6MTYyNTY3MDY2M30.M87BDuQLMl4Za94Q0mPXV5_31JZzxhK36FYdrE1j_pc"}
+2021/07/06 22:11:03:721[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/06 22:11:03:722[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1},{"id":5,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1},{"id":9,"name":"parenr2","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}]
+2021/07/06 22:12:38:417[INFO][logID]  Request http://localhost:8080/api/login Payload={"userName":"1","password":"1"}
+2021/07/06 22:12:38:417[INFO]  Response={"id":"1","firstName":"a","lastName":"b","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjU1ODQzNTgsImV4cCI6MTYyNTY3MDc1OH0.csKxx99tckQIV5-XdcpYFCa5Mf4N3Zmfc0kP131Bcqw"}
+2021/07/06 22:12:38:452[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/06 22:12:38:452[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1},{"id":5,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1},{"id":9,"name":"parenr2","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}]
+2021/07/06 22:14:41:685[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/06 22:14:41:686[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1},{"id":5,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1},{"id":9,"name":"parenr2","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}]
+2021/07/06 22:14:44:211[INFO][logID]  Request http://localhost:8080/api/folder/9
+2021/07/06 22:14:44:211[INFO]  Response=delete success
+2021/07/06 22:14:44:227[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/06 22:14:44:227[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1},{"id":5,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}]
+2021/07/06 22:16:38:150[INFO][logID]  Request http://localhost:8080/api/login Payload={"userName":"1","password":"1"}
+2021/07/06 22:16:38:151[INFO]  Response={"id":"1","firstName":"a","lastName":"b","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjU1ODQ1OTgsImV4cCI6MTYyNTY3MDk5OH0.8qn-T6Rf5l9ADEWB4MLKSuktQQo7Dk7apZ8x9scI9ek"}
+2021/07/06 22:16:38:186[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/06 22:16:38:186[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1},{"id":5,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}]
+2021/07/06 22:26:24:837[INFO][logID]  Request http://localhost:8080/api/login Payload={"userName":"1","password":"1"}
+2021/07/06 22:26:24:837[INFO]  Response={"id":"1","firstName":"a","lastName":"b","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjU1ODUxODQsImV4cCI6MTYyNTY3MTU4NH0.iyMO6xJAcsHCfhKZlHa3ZcAtX2ya6y5XRuuRS-RDJJA"}
+2021/07/06 22:26:24:874[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/06 22:26:24:874[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1},{"id":5,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}]
+2021/07/06 22:26:27:575[INFO][logID]  Request http://localhost:8080/api/folder/5
+2021/07/06 22:26:27:575[INFO]  Response={"id":5,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}
+2021/07/06 22:26:42:977[INFO][logID]  Request http://localhost:8080/api/folder/5
+2021/07/06 22:26:42:977[INFO]  Response={"id":5,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}
+2021/07/06 22:26:43:826[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/06 22:26:43:826[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1},{"id":5,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}]
+2021/07/06 22:31:01:315[INFO][logID]  Request http://localhost:8080/api/login Payload={"userName":"1","password":"1"}
+2021/07/06 22:31:01:315[INFO]  Response={"id":"1","firstName":"a","lastName":"b","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjU1ODU0NjEsImV4cCI6MTYyNTY3MTg2MX0.aZYhbewZQRNtNs6AEsYeUaKtbHWCGQ-zp8FlHlRuLrw"}
+2021/07/06 22:31:01:351[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/06 22:31:01:351[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1},{"id":5,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}]
+2021/07/06 22:31:03:449[INFO][logID]  Request http://localhost:8080/api/folder/5
+2021/07/06 22:31:03:450[INFO]  Response={"id":5,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}
+2021/07/06 22:31:04:855[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/06 22:31:04:856[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1},{"id":5,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}]
+2021/07/06 22:31:06:356[INFO][logID]  Request http://localhost:8080/api/folder/5
+2021/07/06 22:31:06:356[INFO]  Response={"id":5,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}
+2021/07/06 22:31:08:870[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/06 22:31:08:870[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1},{"id":5,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}]
+2021/07/06 22:31:10:390[INFO][logID]  Request http://localhost:8080/api/folder/2
+2021/07/06 22:31:10:390[INFO]  Response={"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1}
+2021/07/06 22:31:11:558[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/06 22:31:11:558[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1},{"id":5,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}]
+2021/07/06 22:31:12:378[INFO][logID]  Request http://localhost:8080/api/folder/1
+2021/07/06 22:31:12:378[INFO]  Response={"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1}
+2021/07/06 22:31:13:518[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/06 22:31:13:519[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1},{"id":5,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}]
+2021/07/06 22:31:14:604[INFO][logID]  Request http://localhost:8080/api/folder/2
+2021/07/06 22:31:14:604[INFO]  Response={"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1}
+2021/07/06 22:31:16:057[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/06 22:31:16:058[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1},{"id":5,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}]
+2021/07/06 22:31:17:302[INFO][logID]  Request http://localhost:8080/api/folder/5
+2021/07/06 22:31:17:302[INFO]  Response={"id":5,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}
+2021/07/06 22:31:18:485[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/06 22:31:18:485[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1},{"id":5,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}]
+2021/07/06 22:31:19:613[INFO][logID]  Request http://localhost:8080/api/folder/2
+2021/07/06 22:31:19:613[INFO]  Response={"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1}
+2021/07/06 22:31:20:407[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/06 22:31:20:407[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1},{"id":5,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}]
+2021/07/06 22:31:21:466[INFO][logID]  Request http://localhost:8080/api/folder/1
+2021/07/06 22:31:21:466[INFO]  Response={"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1}
+2021/07/06 22:31:22:727[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/06 22:31:22:727[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1},{"id":5,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}]
+2021/07/06 22:31:24:648[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/06 22:31:24:649[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1},{"id":5,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}]
+2021/07/06 22:31:25:790[INFO][logID]  Request http://localhost:8080/api/folder/5
+2021/07/06 22:31:25:790[INFO]  Response={"id":5,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}
+2021/07/06 22:31:27:083[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/06 22:31:27:084[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1},{"id":5,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}]
+2021/07/06 22:31:28:136[INFO][logID]  Request http://localhost:8080/api/folder/2
+2021/07/06 22:31:28:137[INFO]  Response={"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1}
+2021/07/06 22:31:29:109[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/06 22:31:29:109[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1},{"id":5,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}]
+2021/07/06 22:31:29:896[INFO][logID]  Request http://localhost:8080/api/folder/1
+2021/07/06 22:31:29:896[INFO]  Response={"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1}
+2021/07/06 22:31:31:223[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/06 22:31:31:223[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1},{"id":5,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}]
+2021/07/06 22:31:36:967[INFO][logID]  Request http://localhost:8080/api/folder/1
+2021/07/06 22:31:36:967[INFO]  Response={"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1}
+2021/07/06 22:31:40:908[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/06 22:31:40:908[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1},{"id":5,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}]
+2021/07/06 22:31:42:240[INFO][logID]  Request http://localhost:8080/api/folder/5
+2021/07/06 22:31:42:240[INFO]  Response={"id":5,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}
+2021/07/06 22:41:31:681[INFO][logID]  Request http://localhost:8080/api/login Payload={"userName":"1","password":"1"}
+2021/07/06 22:41:31:681[INFO]  Response={"id":"1","firstName":"a","lastName":"b","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjU1ODYwOTEsImV4cCI6MTYyNTY3MjQ5MX0.mLFqK9gWRWBymSLbrfX6TZ9o1622kZJ-L8NmZ6qKEA0"}
+2021/07/06 22:41:31:713[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/06 22:41:31:713[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1},{"id":5,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}]
+2021/07/06 22:41:33:367[INFO][logID]  Request http://localhost:8080/api/folder/5
+2021/07/06 22:41:33:367[INFO]  Response={"id":5,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}
+2021/07/06 22:41:56:637[INFO][logID]  Request http://localhost:8080/api/folder/5
+2021/07/06 22:41:56:637[INFO]  Response={"id":5,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}
+2021/07/06 22:45:13:776[INFO][logID]  Request http://localhost:8080/api/login Payload={"userName":"1","password":"1"}
+2021/07/06 22:45:13:776[INFO]  Response={"id":"1","firstName":"a","lastName":"b","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjU1ODYzMTMsImV4cCI6MTYyNTY3MjcxM30.vv4ApdmV7sNYNUXcufjDkFHwokcRQZ3JBB6z3FtQwwc"}
+2021/07/06 22:45:13:814[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/06 22:45:13:814[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1},{"id":5,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}]
+2021/07/06 22:45:16:208[INFO][logID]  Request http://localhost:8080/api/folder/5
+2021/07/06 22:45:16:208[INFO]  Response={"id":5,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}
+2021/07/06 22:45:18:169[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/06 22:45:18:170[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1},{"id":5,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}]
+2021/07/06 22:48:08:337[INFO][logID]  Request http://localhost:8080/api/login Payload={"userName":"1","password":"1"}
+2021/07/06 22:48:08:337[INFO]  Response={"id":"1","firstName":"a","lastName":"b","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjU1ODY0ODgsImV4cCI6MTYyNTY3Mjg4OH0.oXzuY9uzBSh3zd3m4LRB2oYfySJe_waBIILLn2KZd1w"}
+2021/07/06 22:48:08:418[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/06 22:48:08:418[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1},{"id":5,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}]
+2021/07/06 22:48:09:511[INFO][logID]  Request http://localhost:8080/api/folder/5
+2021/07/06 22:48:09:511[INFO]  Response={"id":5,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}
+2021/07/06 22:49:35:335[INFO][logID]  Request http://localhost:8080/api/login Payload={"userName":"1","password":"1"}
+2021/07/06 22:49:35:335[INFO]  Response={"id":"1","firstName":"a","lastName":"b","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjU1ODY1NzUsImV4cCI6MTYyNTY3Mjk3NX0.4vIp-Itq2m1T1WMppPXPC31FoG8rOXgnxiTfhak-5M4"}
+2021/07/06 22:49:35:367[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/06 22:49:35:367[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1},{"id":5,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}]
+2021/07/06 22:49:36:495[INFO][logID]  Request http://localhost:8080/api/folder/5
+2021/07/06 22:49:36:495[INFO]  Response={"id":5,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}
+2021/07/06 22:51:37:300[INFO][logID]  Request http://localhost:8080/api/login Payload={"userName":"1","password":"1"}
+2021/07/06 22:51:37:300[INFO]  Response={"id":"1","firstName":"a","lastName":"b","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjU1ODY2OTcsImV4cCI6MTYyNTY3MzA5N30.rzg-Qjz6fZTilHfnMGQXK_HlUQp5ZyAX_XRsPOUPjfk"}
+2021/07/06 22:51:37:332[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/06 22:51:37:332[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1},{"id":5,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}]
+2021/07/06 22:51:38:693[INFO][logID]  Request http://localhost:8080/api/folder/5
+2021/07/06 22:51:38:693[INFO]  Response={"id":5,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}
+2021/07/06 22:55:19:813[INFO][logID]  Request http://localhost:8080/api/login Payload={"userName":"1","password":"1"}
+2021/07/06 22:55:19:813[INFO]  Response={"id":"1","firstName":"a","lastName":"b","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjU1ODY5MTksImV4cCI6MTYyNTY3MzMxOX0.G6JrDVGRSKqoE3QpEz0rHWKF1xe0aw0Tbh8awF47-SQ"}
+2021/07/06 22:55:19:847[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/06 22:55:19:847[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1},{"id":5,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}]
+2021/07/06 22:55:21:009[INFO][logID]  Request http://localhost:8080/api/folder/5
+2021/07/06 22:55:21:009[INFO]  Response={"id":5,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}
+2021/07/06 22:56:36:041[INFO][logID]  Request http://localhost:8080/api/folder/5
+2021/07/06 22:56:36:041[INFO]  Response={"id":5,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}
+2021/07/06 22:56:37:015[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/06 22:56:37:015[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1},{"id":5,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}]
+2021/07/06 22:56:50:410[INFO][logID]  Request http://localhost:8080/api/folder Payload={"id":0,"name":"parent3","date":1609520520000,"folderId":1,"userId":1}
+2021/07/06 22:56:50:411[INFO]  Response={"id":0,"name":"parent3","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}
+2021/07/06 22:56:50:433[INFO][logID]  Request http://localhost:8080/api/folder Payload={"id":0,"name":"parent3","date":1609520520000,"folderId":1,"userId":1}
+2021/07/06 22:56:50:433[INFO]  Response={"id":0,"name":"parent3","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}
+2021/07/06 22:56:50:444[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/06 22:56:50:444[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1},{"id":5,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1},{"id":10,"name":"parent3","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1},{"id":11,"name":"parent3","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}]
+2021/07/06 22:56:55:187[INFO][logID]  Request http://localhost:8080/api/folder/11
+2021/07/06 22:56:55:187[INFO]  Response=delete success
+2021/07/06 22:56:55:198[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/06 22:56:55:198[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1},{"id":5,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1},{"id":10,"name":"parent3","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}]
+2021/07/06 22:57:30:978[INFO][logID]  Request http://localhost:8080/api/folder/2/1
+2021/07/06 22:57:30:978[INFO]  Response=[{"id":3,"name":"child1","date":"2021-02-01T15:00:00.000+00:00","folderId":2,"userId":1},{"id":4,"name":"child2","date":"2021-02-02T15:00:00.000+00:00","folderId":2,"userId":1}]
+2021/07/06 22:57:33:195[INFO][logID]  Request http://localhost:8080/api/folder/3/1
+2021/07/06 22:57:33:196[INFO]  Response=[]
+2021/07/06 22:57:34:329[INFO][logID]  Request http://localhost:8080/api/folder/2/1
+2021/07/06 22:57:34:329[INFO]  Response=[{"id":3,"name":"child1","date":"2021-02-01T15:00:00.000+00:00","folderId":2,"userId":1},{"id":4,"name":"child2","date":"2021-02-02T15:00:00.000+00:00","folderId":2,"userId":1}]
+2021/07/06 22:57:35:062[INFO][logID]  Request http://localhost:8080/api/folder/4/1
+2021/07/06 22:57:35:063[INFO]  Response=[]
+2021/07/06 22:57:35:905[INFO][logID]  Request http://localhost:8080/api/folder/2/1
+2021/07/06 22:57:35:905[INFO]  Response=[{"id":3,"name":"child1","date":"2021-02-01T15:00:00.000+00:00","folderId":2,"userId":1},{"id":4,"name":"child2","date":"2021-02-02T15:00:00.000+00:00","folderId":2,"userId":1}]
+2021/07/06 22:57:46:471[INFO][logID]  Request http://localhost:8080/api/login Payload={"userName":"1","password":"1"}
+2021/07/06 22:57:46:471[INFO]  Response={"id":"1","firstName":"a","lastName":"b","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjU1ODcwNjYsImV4cCI6MTYyNTY3MzQ2Nn0.hImhMCIE1CVfWly2R6h3dvvc8GBVhv6figRiGoOP8xY"}
+2021/07/06 22:57:46:485[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/06 22:57:46:485[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1},{"id":5,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1},{"id":10,"name":"parent3","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}]
+2021/07/06 23:14:40:846[INFO][logID]  Request http://localhost:8080/api/login Payload={"userName":"1","password":"1"}
+2021/07/06 23:14:40:846[INFO]  Response={"id":"1","firstName":"a","lastName":"b","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjU1ODgwODAsImV4cCI6MTYyNTY3NDQ4MH0.TLwjbhUNXD9Yajv9FUuYhBbSnK5AQCwh4sKkKvqHEFs"}
+2021/07/06 23:14:40:879[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/06 23:14:40:879[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1},{"id":5,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1},{"id":10,"name":"parent3","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}]
+2021/07/06 23:14:41:910[INFO][logID]  Request http://localhost:8080/api/folder/10
+2021/07/06 23:14:41:910[INFO]  Response={"id":10,"name":"parent3","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}
+2021/07/06 23:14:47:362[INFO][logID]  Request http://localhost:8080/api/error
+2021/07/06 23:14:47:362[INFO]  Response={"timestamp":"2021-07-06T16:14:47.359+00:00","status":500,"error":"Internal Server Error","message":"","path":"/api/folder"}
+2021/07/06 23:15:03:768[INFO][logID]  Request http://localhost:8080/api/folder/10
+2021/07/06 23:15:03:768[INFO]  Response={"id":10,"name":"parent3","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}
+2021/07/06 23:15:04:593[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/06 23:15:04:593[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1},{"id":5,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1},{"id":10,"name":"parent3","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}]
+2021/07/06 23:15:07:956[INFO][logID]  Request http://localhost:8080/api/folder/5/1
+2021/07/06 23:15:07:956[INFO]  Response=[]
+2021/07/06 23:15:09:075[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/06 23:15:09:075[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1},{"id":5,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1},{"id":10,"name":"parent3","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}]
+2021/07/06 23:15:09:946[INFO][logID]  Request http://localhost:8080/api/folder/2/1
+2021/07/06 23:15:09:946[INFO]  Response=[{"id":3,"name":"child1","date":"2021-02-01T15:00:00.000+00:00","folderId":2,"userId":1},{"id":4,"name":"child2","date":"2021-02-02T15:00:00.000+00:00","folderId":2,"userId":1}]
+2021/07/06 23:15:11:386[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/06 23:15:11:386[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1},{"id":5,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1},{"id":10,"name":"parent3","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}]
+2021/07/06 23:15:12:884[INFO][logID]  Request http://localhost:8080/api/folder/10/1
+2021/07/06 23:15:12:884[INFO]  Response=[]
+2021/07/06 23:15:13:842[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/06 23:15:13:842[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1},{"id":5,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1},{"id":10,"name":"parent3","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}]
+2021/07/06 23:15:16:026[INFO][logID]  Request http://localhost:8080/api/folder/2/1
+2021/07/06 23:15:16:026[INFO]  Response=[{"id":3,"name":"child1","date":"2021-02-01T15:00:00.000+00:00","folderId":2,"userId":1},{"id":4,"name":"child2","date":"2021-02-02T15:00:00.000+00:00","folderId":2,"userId":1}]
+2021/07/06 23:15:29:010[INFO][logID]  Request http://localhost:8080/api/folder Payload={"id":0,"name":"child4","date":1609520520000,"folderId":2,"userId":1}
+2021/07/06 23:15:29:011[INFO]  Response={"id":0,"name":"child4","date":"2021-01-01T17:02:00.000+00:00","folderId":2,"userId":1}
+2021/07/06 23:15:29:031[INFO][logID]  Request http://localhost:8080/api/folder/2/1
+2021/07/06 23:15:29:031[INFO]  Response=[{"id":3,"name":"child1","date":"2021-02-01T15:00:00.000+00:00","folderId":2,"userId":1},{"id":4,"name":"child2","date":"2021-02-02T15:00:00.000+00:00","folderId":2,"userId":1},{"id":12,"name":"child4","date":"2021-01-01T17:02:00.000+00:00","folderId":2,"userId":1}]
+2021/07/06 23:16:32:604[INFO][logID]  Request http://localhost:8080/api/login Payload={"userName":"1","password":"1"}
+2021/07/06 23:16:32:604[INFO]  Response={"id":"1","firstName":"a","lastName":"b","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjU1ODgxOTIsImV4cCI6MTYyNTY3NDU5Mn0.sH0D7KhUDe75CoydCfBp_xpblF7Ta5aeHkZLC-4pqso"}
+2021/07/06 23:16:32:638[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/06 23:16:32:638[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1},{"id":5,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1},{"id":10,"name":"parent3","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}]
+2021/07/06 23:16:33:660[INFO][logID]  Request http://localhost:8080/api/folder/10
+2021/07/06 23:16:33:661[INFO]  Response={"id":10,"name":"parent3","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}
+2021/07/06 23:16:37:073[INFO][logID]  Request http://localhost:8080/api/error
+2021/07/06 23:16:37:074[INFO]  Response={"timestamp":"2021-07-06T16:16:37.072+00:00","status":500,"error":"Internal Server Error","message":"","path":"/api/folder"}
+2021/07/06 23:24:39:947[INFO][logID]  Request http://localhost:8080/api/login Payload={"userName":"1","password":"1"}
+2021/07/06 23:24:39:947[INFO]  Response={"id":"1","firstName":"a","lastName":"b","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjU1ODg2NzksImV4cCI6MTYyNTY3NTA3OX0.MdnIDLUf_YtyDZthpD5hGczTfTV5mBpaQLwWnbVKiYI"}
+2021/07/06 23:24:39:979[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/06 23:24:39:979[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1},{"id":5,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1},{"id":10,"name":"parent3","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}]
+2021/07/06 23:24:42:594[INFO][logID]  Request http://localhost:8080/api/folder/10
+2021/07/06 23:24:42:594[INFO]  Response={"id":10,"name":"parent3","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}
+2021/07/06 23:26:17:978[INFO][logID]  Request http://localhost:8080/api/login Payload={"userName":"1","password":"1"}
+2021/07/06 23:26:17:978[INFO]  Response={"id":"1","firstName":"a","lastName":"b","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjU1ODg3NzcsImV4cCI6MTYyNTY3NTE3N30.Ne5dFx4sDHvTllFglbPJCFg9WQH4Od6WQnCJ7wmv6-k"}
+2021/07/06 23:26:18:011[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/06 23:26:18:011[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1},{"id":5,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1},{"id":10,"name":"parent3","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}]
+2021/07/06 23:26:19:698[INFO][logID]  Request http://localhost:8080/api/folder/10
+2021/07/06 23:26:19:698[INFO]  Response={"id":10,"name":"parent3","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}
+2021/07/06 23:31:12:905[INFO][logID]  Request http://localhost:8080/api/login Payload={"userName":"1","password":"1"}
+2021/07/06 23:31:12:906[INFO]  Response={"id":"1","firstName":"a","lastName":"b","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjU1ODkwNzIsImV4cCI6MTYyNTY3NTQ3Mn0.vRkxe4PqHI--9d7GbM1bzN2QwaSTviAoRDs0xe5d3hQ"}
+2021/07/06 23:31:12:938[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/06 23:31:12:938[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1},{"id":5,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1},{"id":10,"name":"parent3","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}]
+2021/07/06 23:31:14:288[INFO][logID]  Request http://localhost:8080/api/folder/10
+2021/07/06 23:31:14:288[INFO]  Response={"id":10,"name":"parent3","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}
+2021/07/06 23:32:43:278[INFO][logID]  Request http://localhost:8080/api/login Payload={"userName":"1","password":"1"}
+2021/07/06 23:32:43:278[INFO]  Response={"id":"1","firstName":"a","lastName":"b","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjU1ODkxNjMsImV4cCI6MTYyNTY3NTU2M30._yaiecAwb7s2cc-Ww4EEUtb8rfi6GLj5rSbAXw-3HwU"}
+2021/07/06 23:32:43:310[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/06 23:32:43:310[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1},{"id":5,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1},{"id":10,"name":"parent3","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}]
+2021/07/06 23:32:44:319[INFO][logID]  Request http://localhost:8080/api/folder/10
+2021/07/06 23:32:44:319[INFO]  Response={"id":10,"name":"parent3","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}
+2021/07/06 23:32:46:731[INFO][logID]  Request http://localhost:8080/api/folder/0 Payload={"id":0,"name":"parent32","date":1609520460000,"folderId":0,"userId":0}
+2021/07/06 23:32:46:731[INFO]  Response={"id":0,"name":"parent32","date":"2021-01-01T17:01:00.000+00:00","folderId":0,"userId":0}
+2021/07/06 23:32:46:734[INFO][logID]  Request http://localhost:8080/api/error
+2021/07/06 23:32:46:734[INFO]  Response={"timestamp":"2021-07-06T16:32:46.734+00:00","status":500,"error":"Internal Server Error","message":"","path":"/api/folder/"}
+2021/07/06 23:36:22:344[INFO][logID]  Request http://localhost:8080/api/login Payload={"userName":"1","password":"1"}
+2021/07/06 23:36:22:344[INFO]  Response={"id":"1","firstName":"a","lastName":"b","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjU1ODkzODIsImV4cCI6MTYyNTY3NTc4Mn0.F8OsZDKgwYRRMQtsm1sHQ_b6TViwu2pGAm99CVHRbS4"}
+2021/07/06 23:36:22:375[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/06 23:36:22:375[INFO]  Response=[{"id":1,"name":"root","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parent","date":"2021-03-01T15:00:00.000+00:00","folderId":1,"userId":1},{"id":5,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1},{"id":10,"name":"parent3","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}]
+2021/07/06 23:36:24:185[INFO][logID]  Request http://localhost:8080/api/folder/10
+2021/07/06 23:36:24:185[INFO]  Response={"id":10,"name":"parent3","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}
+2021/07/06 23:36:25:792[INFO][logID]  Request http://localhost:8080/api/folder/1 Payload={"id":0,"name":"parent3","date":1609520460000,"folderId":0,"userId":0}
+2021/07/06 23:36:25:792[INFO]  Response={"id":0,"name":"parent3","date":"2021-01-01T17:01:00.000+00:00","folderId":0,"userId":0}
+2021/07/06 23:36:25:796[INFO][logID]  Request http://localhost:8080/api/error
+2021/07/06 23:36:25:796[INFO]  Response={"timestamp":"2021-07-06T16:36:25.796+00:00","status":500,"error":"Internal Server Error","message":"","path":"/api/folder/"}
+2021/07/06 23:39:40:232[INFO][logID]  Request http://localhost:8080/api/folder/2 Payload={
+
+        "name": "parentMain",
+        "date": "2020-12-31T15:00:00.000+00:00",
+     
+
+}
+2021/07/06 23:39:40:232[INFO]  Response=[unknown]
+2021/07/06 23:40:02:157[INFO][logID]  Request http://localhost:8080/api/folder/2 Payload={
+
+        "name": "parentMain",
+        "date": "2020-12-31T15:00:00.000+00:00"
+     
+
+}
+2021/07/06 23:40:02:157[INFO]  Response={"id":0,"name":"parentMain","date":"2020-12-31T15:00:00.000+00:00","folderId":0,"userId":0}
+2021/07/06 23:44:30:081[INFO][logID]  Request http://localhost:8080/api/login Payload={"userName":"1","password":"1"}
+2021/07/06 23:44:30:085[INFO]  Response={"id":"1","firstName":"a","lastName":"b","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjU1ODk4NzAsImV4cCI6MTYyNTY3NjI3MH0.kZs_DHuDnhS2du-ko88_bWq616PyG_7usR2JlzLmMmY"}
+2021/07/06 23:44:30:133[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/06 23:44:30:133[INFO]  Response=[{"id":1,"name":"parent3","date":"2021-01-01T17:01:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parentMain","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":5,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1},{"id":10,"name":"parent3","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}]
+2021/07/06 23:44:31:415[INFO][logID]  Request http://localhost:8080/api/folder/10
+2021/07/06 23:44:31:415[INFO]  Response={"id":10,"name":"parent3","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}
+2021/07/06 23:44:36:093[INFO][logID]  Request http://localhost:8080/api/folder/0 Payload={"id":0,"name":"parent32","date":1609520460000,"folderId":0,"userId":0}
+2021/07/06 23:44:36:093[INFO]  Response={"id":0,"name":"parent32","date":"2021-01-01T17:01:00.000+00:00","folderId":0,"userId":0}
+2021/07/06 23:44:36:106[INFO][logID]  Request http://localhost:8080/api/error
+2021/07/06 23:44:36:107[INFO]  Response={"timestamp":"2021-07-06T16:44:36.105+00:00","status":500,"error":"Internal Server Error","message":"","path":"/api/folder/"}
+2021/07/06 23:45:07:328[INFO][logID]  Request http://localhost:8080/api/login Payload={"userName":"1","password":"1"}
+2021/07/06 23:45:07:328[INFO]  Response={"id":"1","firstName":"a","lastName":"b","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjU1ODk5MDcsImV4cCI6MTYyNTY3NjMwN30.ta7IQv5KaE6QxrNJ84nyRb0IsW227gSNh0ndlFpmHoc"}
+2021/07/06 23:45:07:366[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/06 23:45:07:366[INFO]  Response=[{"id":1,"name":"parent3","date":"2021-01-01T17:01:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parentMain","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":5,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1},{"id":10,"name":"parent3","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}]
+2021/07/06 23:45:08:604[INFO][logID]  Request http://localhost:8080/api/folder/10
+2021/07/06 23:45:08:604[INFO]  Response={"id":10,"name":"parent3","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}
+2021/07/06 23:48:34:267[INFO][logID]  Request http://localhost:8080/api/folder/0 Payload={"id":0,"name":"parent3","date":1609520460000,"folderId":0,"userId":0}
+2021/07/06 23:48:34:267[INFO]  Response={"id":0,"name":"parent3","date":"2021-01-01T17:01:00.000+00:00","folderId":0,"userId":0}
+2021/07/06 23:48:34:274[INFO][logID]  Request http://localhost:8080/api/error
+2021/07/06 23:48:34:275[INFO]  Response={"timestamp":"2021-07-06T16:48:34.274+00:00","status":500,"error":"Internal Server Error","message":"","path":"/api/folder/"}
+2021/07/06 23:49:41:049[INFO][logID]  Request http://localhost:8080/api/login Payload={"userName":"1","password":"1"}
+2021/07/06 23:49:41:049[INFO]  Response={"id":"1","firstName":"a","lastName":"b","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjU1OTAxODEsImV4cCI6MTYyNTY3NjU4MX0.sK-eumjRqGJiMrNkz3V-9mJwvDdw-zz39qRolVNm5yk"}
+2021/07/06 23:49:41:085[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/06 23:49:41:085[INFO]  Response=[{"id":1,"name":"parent3","date":"2021-01-01T17:01:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parentMain","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":5,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1},{"id":10,"name":"parent3","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}]
+2021/07/06 23:49:42:040[INFO][logID]  Request http://localhost:8080/api/folder/10
+2021/07/06 23:49:42:040[INFO]  Response={"id":10,"name":"parent3","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}
+2021/07/06 23:54:00:389[INFO][logID]  Request http://localhost:8080/api/folder/0 Payload={"id":0,"name":"parent3","date":1609520400000,"folderId":0,"userId":0}
+2021/07/06 23:54:00:390[INFO]  Response={"id":0,"name":"parent3","date":"2021-01-01T17:00:00.000+00:00","folderId":0,"userId":0}
+2021/07/06 23:54:00:403[INFO][logID]  Request http://localhost:8080/api/error
+2021/07/06 23:54:00:404[INFO]  Response={"timestamp":"2021-07-06T16:54:00.401+00:00","status":500,"error":"Internal Server Error","message":"","path":"/api/folder/"}
+2021/07/06 23:54:16:878[INFO][logID]  Request http://localhost:8080/api/login Payload={"userName":"1","password":"1"}
+2021/07/06 23:54:16:878[INFO]  Response={"id":"1","firstName":"a","lastName":"b","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjU1OTA0NTYsImV4cCI6MTYyNTY3Njg1Nn0.0Dp0m-HRkTLPNJwYnxZ-AQUJkcTR3tZ-zb-vasVRixE"}
+2021/07/06 23:54:16:913[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/06 23:54:16:913[INFO]  Response=[{"id":1,"name":"parent3","date":"2021-01-01T17:01:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parentMain","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":5,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1},{"id":10,"name":"parent3","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}]
+2021/07/06 23:54:17:575[INFO][logID]  Request http://localhost:8080/api/folder/10
+2021/07/06 23:54:17:576[INFO]  Response={"id":10,"name":"parent3","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1}
+2021/07/06 23:54:19:793[INFO][logID]  Request http://localhost:8080/api/folder/10 Payload={"id":10,"name":"parent3","date":1609520400000,"folderId":0,"userId":0}
+2021/07/06 23:54:19:793[INFO]  Response={"id":0,"name":"parent3","date":"2021-01-01T17:00:00.000+00:00","folderId":0,"userId":0}
+2021/07/06 23:54:19:797[INFO][logID]  Request http://localhost:8080/api/error
+2021/07/06 23:54:19:797[INFO]  Response={"timestamp":"2021-07-06T16:54:19.797+00:00","status":500,"error":"Internal Server Error","message":"","path":"/api/folder/"}
+2021/07/06 23:54:38:985[INFO][logID]  Request http://localhost:8080/api/login Payload={"userName":"1","password":"1"}
+2021/07/06 23:54:38:985[INFO]  Response={"id":"1","firstName":"a","lastName":"b","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjU1OTA0NzgsImV4cCI6MTYyNTY3Njg3OH0.TIjZRtZVGwShLBFb6NrAoN4RMFuRbv8ialMhrqE1bZc"}
+2021/07/06 23:54:39:019[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/06 23:54:39:019[INFO]  Response=[{"id":1,"name":"parent3","date":"2021-01-01T17:01:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parentMain","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":5,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1},{"id":10,"name":"parent3","date":"2021-01-01T17:00:00.000+00:00","folderId":1,"userId":1}]
+2021/07/06 23:54:41:536[INFO][logID]  Request http://localhost:8080/api/folder/10
+2021/07/06 23:54:41:536[INFO]  Response={"id":10,"name":"parent3","date":"2021-01-01T17:00:00.000+00:00","folderId":1,"userId":1}
+2021/07/06 23:55:48:176[INFO][logID]  Request http://localhost:8080/api/folder/10 Payload={"id":10,"name":"parent3","date":1609520400000,"folderId":0,"userId":0}
+2021/07/06 23:55:48:176[INFO]  Response={"id":0,"name":"parent3","date":"2021-01-01T17:00:00.000+00:00","folderId":0,"userId":0}
+2021/07/06 23:55:48:184[INFO][logID]  Request http://localhost:8080/api/error
+2021/07/06 23:55:48:184[INFO]  Response={"timestamp":"2021-07-06T16:55:48.183+00:00","status":500,"error":"Internal Server Error","message":"","path":"/api/folder/"}
+2021/07/06 23:55:55:526[INFO][logID]  Request http://localhost:8080/api/login Payload={"userName":"1","password":"1"}
+2021/07/06 23:55:55:526[INFO]  Response={"id":"1","firstName":"a","lastName":"b","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyTmFtZSI6IjEiLCJpYXQiOjE2MjU1OTA1NTUsImV4cCI6MTYyNTY3Njk1NX0.ZjV7tjYGYVye9ikREM9aFENRlNstp04uUYu5rJLaT60"}
+2021/07/06 23:55:55:561[INFO][logID]  Request http://localhost:8080/api/folder/1/1
+2021/07/06 23:55:55:561[INFO]  Response=[{"id":1,"name":"parent3","date":"2021-01-01T17:01:00.000+00:00","folderId":1,"userId":1},{"id":2,"name":"parentMain","date":"2020-12-31T15:00:00.000+00:00","folderId":1,"userId":1},{"id":5,"name":"cuong","date":"2021-01-01T17:02:00.000+00:00","folderId":1,"userId":1},{"id":10,"name":"parent3","date":"2021-01-01T17:00:00.000+00:00","folderId":1,"userId":1}]
+2021/07/06 23:55:56:521[INFO][logID]  Request http://localhost:8080/api/folder/10
+2021/07/06 23:55:56:521[INFO]  Response={"id":10,"name":"parent3","date":"2021-01-01T17:00:00.000+00:00","folderId":1,"userId":1}

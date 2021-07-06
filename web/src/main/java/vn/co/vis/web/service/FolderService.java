@@ -10,8 +10,12 @@ import java.util.List;
 import java.util.Optional;
 
 public interface FolderService {
-    Optional<List<FolderResponse>> getFolder(HttpServletRequest httpServletRequest, String id, String userId);
+    Optional<List<FolderResponse>> getFoldersById(HttpServletRequest httpServletRequest, String id, String userId);
+    Optional<FolderResponse> getFolder(HttpServletRequest httpServletRequest, String id);
+
     ResponseEntity<String> deleteFolder(HttpServletRequest httpServletRequest, String id);
+
     Optional<FolderResponse>  insertFolder(HttpServletRequest httpServletRequest, FolderRequest folderRequest);
+
     ResponseEntity<FolderResponse> updateFolder(HttpServletRequest httpServletRequest, FolderRequest folderRequest);
 }

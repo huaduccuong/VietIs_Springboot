@@ -18,12 +18,22 @@ import java.util.Optional;
 public class FolderServiceImpl extends AbstractService implements FolderService {
 
     @Override
-    public Optional<List<FolderResponse>> getFolder(HttpServletRequest httpServletRequest, String id, String userId) {
+    public Optional<List<FolderResponse>> getFoldersById(HttpServletRequest httpServletRequest, String id, String userId) {
         FolderResponse[] responses = apiExchangeService.get(httpServletRequest, apiExchangeService.createURL(backApiUrl, "folder", id, userId), FolderResponse[].class);
         if (responses == null || responses.length == 0) {
             return Optional.empty();
         }
         return Optional.of(Arrays.asList(responses));
+    }
+
+    @Override
+    public Optional<FolderResponse> getFolder(HttpServletRequest httpServletRequest, String id) {
+        FolderResponse response
+                = apiExchangeService.get(httpServletRequest, apiExchangeService.createURL(backApiUrl, "folder", id), FolderResponse.class);
+        if (response == null) {
+            return Optional.empty();
+        }
+        return Optional.of(response);
     }
 
     @Override
@@ -41,7 +51,8 @@ public class FolderServiceImpl extends AbstractService implements FolderService 
 
     @Override
     public ResponseEntity<FolderResponse> updateFolder(HttpServletRequest httpServletRequest, FolderRequest folderRequest) {
-        ResponseEntity<FolderResponse> response = apiExchangeService.put(httpServletRequest,backApiUrl + "/folder",folderRequest,FolderResponse.class);
+        String id = String.valueOf(folderRequest.getId());
+        ResponseEntity<FolderResponse> response = apiExchangeService.put(httpServletRequest,backApiUrl + "/folder/"+id,folderRequest,FolderResponse.class);
         return response;
     }
 }
