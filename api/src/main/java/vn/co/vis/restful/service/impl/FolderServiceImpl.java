@@ -41,4 +41,10 @@ public class FolderServiceImpl  extends AbstractService implements FolderService
         return folderResponse ;
 
     }
+
+    @Override
+    public Optional<FolderResponse> updateFolder(String id, Folder folder) {
+        Optional<FolderResponse>  folderResponse = folderRepository.update(id, folder);
+        return folderResponse ;
+    }
 }

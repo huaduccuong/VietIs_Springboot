@@ -11,4 +11,5 @@ public interface FolderService {
     Optional<List<FolderResponse>> getFolder(String id, String userId);
     Optional<String> deleteFolder(String id);
     Optional<FolderResponse> insertFolder(Folder folder);
+    Optional<FolderResponse> updateFolder(String id,Folder folder);
 }

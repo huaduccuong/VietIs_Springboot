@@ -26,4 +26,10 @@ public class FolderController extends AbstractController<FolderService>{
     public Optional<FolderResponse> insert(@RequestBody Folder folder) {
         return service.insertFolder(folder);
     }
+
+    @PutMapping(value = "/{id}")
+    public  ResponseEntity<?>  updateFolder(@PathVariable String id,@RequestBody Folder folder)
+    {
+        return response(service.updateFolder(id,folder));
+    }
 }

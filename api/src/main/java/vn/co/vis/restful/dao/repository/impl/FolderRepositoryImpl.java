@@ -60,5 +60,15 @@ public class FolderRepositoryImpl extends AbstractRepository implements FolderRe
         return  Optional.ofNullable(folderResponse);
     }
 
+    @Override
+    public Optional<FolderResponse> update(String id, Folder folder) {
+        String sql = "update " + getSimpleNameTable(Folder.class) + " set name = ?, date = ? where id = ?";
+        jdbcTemplate.update(sql,folder.getName(),folder.getDate(),id);
+        FolderResponse folderResponse =  new FolderResponse();
+        folderResponse.setName(folder.getName());
+        folderResponse.setDate(folder.getDate());
+        return  Optional.ofNullable(folderResponse);
+    }
+
 
 }

@@ -11,5 +11,7 @@ public interface FolderRepository {
     Optional<List<Folder>> findById(String id, String userId);
     String deleteById(String id);
     Optional<FolderResponse> insert(Folder folder);
+    Optional<FolderResponse> update(String id, Folder folder);
+
 
 }

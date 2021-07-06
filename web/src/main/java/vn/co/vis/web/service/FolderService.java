@@ -13,4 +13,5 @@ public interface FolderService {
     Optional<List<FolderResponse>> getFolder(HttpServletRequest httpServletRequest, String id, String userId);
     ResponseEntity<String> deleteFolder(HttpServletRequest httpServletRequest, String id);
     Optional<FolderResponse>  insertFolder(HttpServletRequest httpServletRequest, FolderRequest folderRequest);
+    ResponseEntity<FolderResponse> updateFolder(HttpServletRequest httpServletRequest, FolderRequest folderRequest);
 }

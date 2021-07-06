@@ -2,6 +2,7 @@ package vn.co.vis.web.controller;
 
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
+import vn.co.vis.web.constant.DateTime;
 import vn.co.vis.web.dto.request.FolderRequest;
 import vn.co.vis.web.dto.request.LoginRequest;
 import vn.co.vis.web.dto.response.LoginResponse;
@@ -27,7 +28,6 @@ public class FolderController extends AbstractController<FolderService>{
 
     @PostMapping(value = "/insert")
     public ModelAndView insertFolder(HttpServletRequest httpServletRequest) throws ParseException {
-
         Date date1=new SimpleDateFormat("yyyy-mm-dd").parse(httpServletRequest.getParameter("folderDate"));
 
         FolderRequest folderRequest  = new FolderRequest();
@@ -37,6 +37,27 @@ public class FolderController extends AbstractController<FolderService>{
         folderRequest.setDate(date1);
         // insert thư mục
         service.insertFolder(httpServletRequest,folderRequest);
+
+
+        ModelAndView modelAndView = new ModelAndView("folder");
+        modelAndView.addObject("folderInfo", service.getFolder(httpServletRequest,
+                httpServletRequest.getParameter("parentFolderId"),
+                httpServletRequest.getParameter("userId")).get());
+        return modelAndView;
+    }
+
+    @PostMapping(value = "/update")
+    public ModelAndView updateFolder(HttpServletRequest httpServletRequest) throws ParseException {
+
+        Date date1=new SimpleDateFormat("yyyy-mm-dd").parse(httpServletRequest.getParameter("folderDate"));
+
+        FolderRequest folderRequest  = new FolderRequest();
+        folderRequest.setName(httpServletRequest.getParameter("folderName"));
+        folderRequest.setFolderId(Integer.parseInt(httpServletRequest.getParameter("parentFolderId")));
+        folderRequest.setUserId(Integer.parseInt(httpServletRequest.getParameter("userId")));
+        folderRequest.setDate(date1);
+        // insert thư mục
+        service.updateFolder(httpServletRequest,folderRequest);
 
 
         ModelAndView modelAndView = new ModelAndView("folder");
