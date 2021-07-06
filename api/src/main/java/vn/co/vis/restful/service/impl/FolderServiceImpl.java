@@ -30,9 +30,9 @@ public class FolderServiceImpl  extends AbstractService implements FolderService
     }
 
     @Override
-    public String deleteFolder(String id) {
+    public  Optional<String> deleteFolder(String id) {
         String  folderResponse = folderRepository.deleteById(id);
-        return folderResponse ;
+        return Optional.of(folderResponse) ;
     }
 
     @Override

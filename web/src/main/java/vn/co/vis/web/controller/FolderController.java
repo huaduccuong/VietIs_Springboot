@@ -56,13 +56,16 @@ public class FolderController extends AbstractController<FolderService>{
 
 
 
-//    @PostMapping(value = "delete")
-//    public ModelAndView delete(HttpServletRequest httpServletRequest) {
-//        Optional<LoginResponse> response = service.deleteFolder(httpServletRequest,httpServletRequest.get);
-//        if (response.equals(null)) {
-//            return new ModelAndView("redirect:/error/system-error");
-//        }
-////        return new ModelAndView("redirect:/user/detail?user-name=" + request.getUserName());
-//        return new ModelAndView("redirect:/folders/parent?id=1"+"&user-id="+ request.getUserName());
-//    }
+    @PostMapping(value = "delete")
+    public ModelAndView delete(HttpServletRequest httpServletRequest,
+                               @RequestParam(name = "parent-folder-id") String idParentFolder,
+                               @RequestParam(name = "id") String idFolder,
+                               @RequestParam(name = "user-id") String userId) {
+        // delete folder
+        service.deleteFolder(httpServletRequest,idFolder);
+
+        ModelAndView modelAndView = new ModelAndView("folder");
+        modelAndView.addObject("folderInfo", service.getFolder(httpServletRequest, idParentFolder,userId).get());
+        return modelAndView;
+    }
 }

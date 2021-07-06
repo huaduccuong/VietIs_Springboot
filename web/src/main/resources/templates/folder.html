@@ -16,7 +16,11 @@
             </td>
             <td th:text="${folder.name}"> </td>
             <td th:text="${folder.date}"> </td>
-
+            <td>
+                <form th:action="@{/folders/delete(id=${folder.id},user-id=${folder.getUserId()},parent-folder-id=${folder.getFolderId()})}" method="post" enctype="multipart/form-data" >
+                <button type="submit" name="delete" value="Delete">Delete</button>
+                </form>
+            </td>
         <div th:if="${index.count==folderInfo.size()}">
             <a th:href="@{/folders/insert(id-folder-parent=${folder.getFolderId()},id-user=${folder.getUserId()})}">
                 <img alt="photo" title="Google login" th:src="@{/img/add.png}" th:width="40" th:height="40"/>

@@ -26,25 +26,25 @@ public class FolderRepositoryImpl extends AbstractRepository implements FolderRe
 
     @Override
     public  String deleteById(String id) {
-        String sql = "DELETE FROM VENUE WHERE id =:id?";
-        Map<String, Object> paramMap = new HashMap<String, Object>();
-        paramMap.put("id", id);
+//        String sql = "DELETE FROM VENUE WHERE id =:id?";
+//        Map<String, Object> paramMap = new HashMap<String, Object>();
+//        paramMap.put("id", id);
+//
+//        Object[] args = new Object[] {id};
+//        int update = jdbcTemplate.update(sql, paramMap);
+//        String updatecount = "Failed";
+//        if (update == 0) {
+//            updatecount = "Failed";
+//        } else {
+//            updatecount = "SUCCESS";
+//        }
+//        return updatecount;
 
-        Object[] args = new Object[] {id};
-        int update = jdbcTemplate.update(sql, paramMap);
-        String updatecount = "Failed";
-        if (update == 0) {
-            updatecount = "Failed";
-        } else {
-            updatecount = "SUCCESS";
-        }
-        return updatecount;
 
-
-//        String sql2 = "delete from "+getSimpleNameTable(Folder.class)+" where id = ?";
-//        Object[] folderId = new Object[] {id};
-//        jdbcTemplate.update(sql2,folderId);
-//        return  "delete success";
+        String sql2 = "delete from "+getSimpleNameTable(Folder.class)+" where id = ?";
+        Object[] folderId = new Object[] {id};
+        jdbcTemplate.update(sql2,folderId);
+        return  "delete success";
     }
 
     @Override

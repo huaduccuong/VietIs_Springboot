@@ -33,4 +33,5 @@ public abstract class AbstractController<S> {
             throw new ResourceNotFoundException();
         }), HttpStatus.OK);
     }
+
 }

@@ -16,12 +16,13 @@ public class FolderController extends AbstractController<FolderService>{
     public ResponseEntity<?> getFolder(@PathVariable String id,@PathVariable String userId) {
         return response(service.getFolder(id,userId));
     }
-    @PostMapping(value = "/delete/{id}")
-    public String deleteFolder(@PathVariable String id)
+    @DeleteMapping(value = "/{id}")
+    public  ResponseEntity<?>  deleteFolder(@PathVariable String id)
     {
-        return service.deleteFolder(id);
+        return response(service.deleteFolder(id));
     }
-    @PostMapping(value = "/insert")
+
+    @PostMapping(value = "")
     public Optional<FolderResponse> insert(@RequestBody Folder folder) {
         return service.insertFolder(folder);
     }

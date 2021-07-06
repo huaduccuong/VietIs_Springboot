@@ -1,5 +1,6 @@
 package vn.co.vis.web.service.impl;
 
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import vn.co.vis.web.dto.request.FolderRequest;
 import vn.co.vis.web.dto.response.FolderResponse;
@@ -26,18 +27,15 @@ public class FolderServiceImpl extends AbstractService implements FolderService 
     }
 
     @Override
-    public Optional<FolderResponse> deleteFolder(HttpServletRequest httpServletRequest,String id) {
-        FolderResponse response
-                = apiExchangeService.get(httpServletRequest, apiExchangeService.createURL(backApiUrl, "/folder/delete",id), FolderResponse.class);
-        if (response == null) {
-            return Optional.empty();
-        }
-        return Optional.of(response);
+    public ResponseEntity<String> deleteFolder(HttpServletRequest httpServletRequest,String id) {
+       ResponseEntity<String> response = apiExchangeService.delete(httpServletRequest,backApiUrl + "/folder/" + id,null,String.class);
+        return response;
     }
 
     @Override
     public Optional<FolderResponse> insertFolder(HttpServletRequest httpServletRequest, FolderRequest folderRequest) {
         FolderResponse response = apiExchangeService.post(httpServletRequest, backApiUrl + "/folder/insert", folderRequest, FolderResponse.class);
         return Optional.of(response);
+
     }
 }
