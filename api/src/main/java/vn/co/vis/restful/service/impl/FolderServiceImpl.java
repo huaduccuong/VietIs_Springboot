@@ -31,14 +31,14 @@ public class FolderServiceImpl  extends AbstractService implements FolderService
 
     @Override
     public String deleteFolder(String id) {
-        System.out.println("hi");
         String  folderResponse = folderRepository.deleteById(id);
         return folderResponse ;
     }
 
     @Override
-    public String insertFolder(Folder folder) {
-        String  folderResponse = folderRepository.insert(folder);
+    public Optional<FolderResponse> insertFolder(Folder folder) {
+        Optional<FolderResponse>  folderResponse = folderRepository.insert(folder);
         return folderResponse ;
+
     }
 }

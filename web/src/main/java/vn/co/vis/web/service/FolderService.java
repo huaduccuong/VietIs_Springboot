@@ -11,5 +11,5 @@ import java.util.Optional;
 public interface FolderService {
     Optional<List<FolderResponse>> getFolder(HttpServletRequest httpServletRequest, String id, String userId);
     Optional<FolderResponse> deleteFolder(HttpServletRequest httpServletRequest,String id);
-    String insertFolder(HttpServletRequest httpServletRequest, FolderRequest folderRequest);
+    Optional<FolderResponse>  insertFolder(HttpServletRequest httpServletRequest, FolderRequest folderRequest);
 }

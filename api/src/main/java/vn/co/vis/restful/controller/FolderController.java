@@ -4,7 +4,10 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import vn.co.vis.restful.dao.entity.Folder;
 import vn.co.vis.restful.dto.request.LoginRequest;
+import vn.co.vis.restful.dto.response.FolderResponse;
 import vn.co.vis.restful.service.FolderService;
+
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/folder")
@@ -19,7 +22,7 @@ public class FolderController extends AbstractController<FolderService>{
         return service.deleteFolder(id);
     }
     @PostMapping(value = "/insert")
-    public String insert(@RequestBody Folder folder) {
+    public Optional<FolderResponse> insert(@RequestBody Folder folder) {
         return service.insertFolder(folder);
     }
 }
