@@ -8,10 +8,8 @@ import vn.co.vis.restful.dao.repository.AbstractRepository;
 import vn.co.vis.restful.dao.repository.FolderRepository;
 import vn.co.vis.restful.dto.response.FolderResponse;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 @Repository
 public class FolderRepositoryImpl extends AbstractRepository implements FolderRepository {
@@ -63,8 +61,14 @@ public class FolderRepositoryImpl extends AbstractRepository implements FolderRe
 
     @Override
     public Optional<FolderResponse> update(String id, Folder folder) {
+        String pattern = "yyyy-MM-dd";
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
+
+        String date = simpleDateFormat.format(folder.getDate());
+
+
         String sql = "update " + getSimpleNameTable(Folder.class) + " set name = ?, date = ? where id = ?";
-        jdbcTemplate.update(sql,folder.getName(),folder.getDate(),id);
+        jdbcTemplate.update(sql,folder.getName(),date,id);
         FolderResponse folderResponse =  new FolderResponse();
         folderResponse.setName(folder.getName());
         folderResponse.setDate(folder.getDate());

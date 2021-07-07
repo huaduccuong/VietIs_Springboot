@@ -16,6 +16,7 @@ import java.text.SimpleDateFormat;
 
 
 import java.util.Date;
+import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -25,7 +26,11 @@ public class FolderController extends AbstractController<FolderService>{
     public ModelAndView getFolders(HttpServletRequest httpServletRequest, @RequestParam(name = "id") String idFolder,
                                  @RequestParam(name = "user-id") String userId) {
         ModelAndView modelAndView = new ModelAndView("folder");
-        modelAndView.addObject("folderInfo", service.getFoldersById(httpServletRequest, idFolder,userId).get());
+
+        Optional<List<FolderResponse>> folderResponses = Optional.of(service.getFoldersById(httpServletRequest, idFolder, userId).get());
+        if(!folderResponses.get().isEmpty()) {
+            modelAndView.addObject("folderInfo", folderResponses.get());
+        }
         return modelAndView;
     }
 
@@ -107,6 +112,8 @@ public class FolderController extends AbstractController<FolderService>{
         modelAndView.addObject("folderName",folderResponse.get().getName());
         modelAndView.addObject("folderDateCreated",date);
         modelAndView.addObject("folderId",idFolder);
+        modelAndView.addObject("idParentFolder",folderResponse.get().getFolderId());
+        modelAndView.addObject("idUser",folderResponse.get().getUserId());
 //        modelAndView.addObject("idParentFolder",folderResponse.get().getFolderId());
         return modelAndView;
     }

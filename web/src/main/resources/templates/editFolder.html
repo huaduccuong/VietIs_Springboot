@@ -13,12 +13,8 @@
 
   <label>Folder date:</label>
   <input type="text" name="folderDate" th:value="${folderDateCreated}"><br><br>
-
-  <label>Parent Folder_Id:</label>
-
-  <input type="text" name="parentFolderId" th:value="${idParentFolder}"><br><br>
-  <label>User_Id:</label>
-  <input type="text" name="userId"  th:value="${idUser}"><br><br>
+  <input type="hidden" name="parentFolderId" th:value="${idParentFolder}"><br><br>
+  <input type="hidden" name="userId"  th:value="${idUser}"><br><br>
 <!--  <input type="submit" value="Save">-->
 
   <button type="submit" name="action" value="create">Create</button>
