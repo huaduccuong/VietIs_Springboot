@@ -22,11 +22,12 @@ public class UploadController  {
     public ModelAndView uploadFile(@RequestParam("file") MultipartFile file) throws IllegalStateException, IOException {
         System.out.println("aaaz"+file);
 //        String baseDir = "C:\\Users\\cuonghd\\Documents\\GitHub\\VietIs_Springboot\\web\\src\\main\\resources\\static\\upload";
-        String baseDir = "E:\\VIET_IS\\ProjectGit\\VietIs_Springboot\\web\\src\\main\\resources\\static\\upload";
-        file.transferTo(new File(baseDir + file.getOriginalFilename()));
+        String baseDir = "E:\\VIET_IS\\ProjectGit\\VietIs_Springboot\\web\\src\\main\\resources\\static\\upload\\";
+
+       file.transferTo(new File(baseDir + file.getOriginalFilename()));
         ModelAndView modelAndView = new ModelAndView("index");
 //        modelAndView.addObject("folderInfo", service.getFolder(httpServletRequest, "1","1").get());
-//        modelAndView.addObject("test","haha");
+        modelAndView.addObject("file",file);
         return modelAndView;
 
     }

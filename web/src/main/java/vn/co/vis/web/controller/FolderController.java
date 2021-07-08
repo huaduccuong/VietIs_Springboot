@@ -25,11 +25,19 @@ public class FolderController extends AbstractController<FolderService>{
     @GetMapping(value = "/parent")
     public ModelAndView getFolders(HttpServletRequest httpServletRequest, @RequestParam(name = "id") String idFolder,
                                  @RequestParam(name = "user-id") String userId) {
-        ModelAndView modelAndView = new ModelAndView("folder");
+        ModelAndView modelAndView = new ModelAndView();
 
-        Optional<List<FolderResponse>> folderResponses = Optional.of(service.getFoldersById(httpServletRequest, idFolder, userId).get());
-        if(!folderResponses.get().isEmpty()) {
+
+        if(!service.getFoldersById(httpServletRequest, idFolder, userId).isEmpty()) {
+            Optional<List<FolderResponse>> folderResponses = Optional.of(service.getFoldersById(httpServletRequest, idFolder, userId).get());
+            modelAndView = new ModelAndView("folder");
             modelAndView.addObject("folderInfo", folderResponses.get());
+        }
+        else
+        {
+            modelAndView = new ModelAndView("folder-empty");
+            modelAndView.addObject("parentFolderId",idFolder);
+            modelAndView.addObject("userId",userId);
         }
         return modelAndView;
     }

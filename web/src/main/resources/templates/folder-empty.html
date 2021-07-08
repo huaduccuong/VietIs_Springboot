@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xml:lang="en" lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<table>
+  <!--    <h1 th:text="${test}"></h1>-->
+    <div>
+      <a th:href="@{/folders/insert(id-folder-parent=${parentFolderId},id-user=${userId})}">
+        <img alt="photo" title="Google login" th:src="@{/img/add.png}" th:width="40" th:height="40"/>
+      </a>
+
+
+      <form th:action="@{/upload}" method="post" enctype="multipart/form-data" >
+        <table>
+          <tr><td>File to upload:</td><td><input type="file" name="file" /></td></tr>
+          <tr><td></td><td><input type="submit" value="Upload" /></td></tr>
+        </table>
+      </form>
+    </div>
+
+
+</table>
+</body>
+</html>

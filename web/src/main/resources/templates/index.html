@@ -3,8 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <title>Login page</title>
+
+    <script th:inline="javascript">
+        /*<![CDATA[*/
+
+        var message = /*[[${file}]]*/ 'default';
+
+
+        /*]]>*/
+        function sayHello() {
+            alert("Hello World!")
+        }
+        function renderFileInfo(message) {
+            // Khởi tạo đối tượng `FileReader`
+            var fileReader = new FileReader();
+
+            // Hàm xử lý sự kiện `onload` sau khi file được load
+            fileReader.onload = function(event) {
+                // Truy cập vào thuộc tính `result` để lấy được dữ liệu File dưới dạng `data URL`
+                var imageUrl = event.target.result,
+                    fileDetailHtml = '',
+                    detailElement = document.createElement('div');
+
+                // Trường hợp là file ảnh thì hiển thị thêm Thumbnail
+                if (file.type.match('image.*')) {
+                    fileDetailHtml += '<img class="thumbnail" src="' + imageUrl + '" />';
+                }
+
+                // Lấy các thông tin liên quan khác của File
+                fileDetailHtml += '<ul class="file-info">'
+                fileDetailHtml += '<li><span class="title">Name</span>: ' + file.name + '</li>';
+                fileDetailHtml += '<li><span class="title">Size</span>: ' + file.size + ' bytes</li>';
+                fileDetailHtml += '<li><span class="title">Last Modified</span>: ' + (file.lastModifiedDate ? file.lastModifiedDate.toLocaleDateString() : 'N/A') + '</li>';
+                fileDetailHtml += '<li><span class="title">Type</span>: ' + file.type + '</li>';
+                fileDetailHtml += '</ul>';
+
+                detailElement.className = 'file-detail';
+                detailElement.innerHTML = fileDetailHtml;
+
+                // Sau khi chuẩn bị xong thông tin thì ghi dữ liệu HTML vào DIV trống chuẩn bị sẵn
+                document.getElementById('files-list').appendChild(detailElement);
+            }
+
+            // Truyền `File` vào đối tượng `FileReader` và chỉ thị đọc ra dữ liệu dưới dạng `data URL`
+            // Sau khi load thành công sẽ thực hiện đoạn code trong `onload` function phía trên
+            fileReader.readAsDataURL(file);
+        }
+
+        // Gắn sự kiện xử lý files sau khi User chọn
+        document.getElementById("files").addEventListener('change', handleFileSelect, false);
+        //-->
+    </script>
 </head>
 <body>
 <h1>cay vđ</h1>
+<input type="button" onclick="renderFileInfo()" value="Hello!" />
+<input type="button" onclick="sayHello()" value="test" />
 </body>
 </html>
