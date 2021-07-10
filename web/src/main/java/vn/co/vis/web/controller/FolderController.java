@@ -2,13 +2,9 @@ package vn.co.vis.web.controller;
 
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
-import vn.co.vis.web.constant.DateTime;
 import vn.co.vis.web.dto.request.FolderRequest;
-import vn.co.vis.web.dto.request.LoginRequest;
 import vn.co.vis.web.dto.response.FolderResponse;
-import vn.co.vis.web.dto.response.LoginResponse;
 import vn.co.vis.web.service.FolderService;
-import vn.co.vis.web.service.UserService;
 
 import javax.servlet.http.HttpServletRequest;
 import java.text.ParseException;
@@ -30,7 +26,7 @@ public class FolderController extends AbstractController<FolderService>{
 
         if(!service.getFoldersById(httpServletRequest, idFolder, userId).isEmpty()) {
             Optional<List<FolderResponse>> folderResponses = Optional.of(service.getFoldersById(httpServletRequest, idFolder, userId).get());
-            modelAndView = new ModelAndView("folder");
+            modelAndView = new ModelAndView("home");
             modelAndView.addObject("folderInfo", folderResponses.get());
         }
         else
@@ -79,7 +75,7 @@ public class FolderController extends AbstractController<FolderService>{
         }
 
 
-        ModelAndView modelAndView = new ModelAndView("folder");
+        ModelAndView modelAndView = new ModelAndView("home");
         modelAndView.addObject("folderInfo", service.getFoldersById(httpServletRequest,
                 httpServletRequest.getParameter("parentFolderId"),
                 httpServletRequest.getParameter("userId")).get());
@@ -145,7 +141,7 @@ public class FolderController extends AbstractController<FolderService>{
         // delete folder
         service.deleteFolder(httpServletRequest,idFolder);
 
-        ModelAndView modelAndView = new ModelAndView("folder");
+        ModelAndView modelAndView = new ModelAndView("home");
         modelAndView.addObject("folderInfo", service.getFoldersById(httpServletRequest, idParentFolder,userId).get());
         return modelAndView;
     }

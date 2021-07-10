@@ -6,6 +6,7 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 import vn.co.vis.web.dto.request.LoginRequest;
 import vn.co.vis.web.dto.response.LoginResponse;
+import vn.co.vis.web.service.ContentService;
 import vn.co.vis.web.service.FolderService;
 import vn.co.vis.web.service.LoginService;
 
@@ -17,7 +18,7 @@ import java.util.Optional;
 
 @Controller
 @RequestMapping("/upload")
-public class UploadController  {
+public class UploadController  extends AbstractController<ContentService>{
     @PostMapping(value = "")
     public ModelAndView uploadFile(@RequestParam("file") MultipartFile file) throws IllegalStateException, IOException {
         System.out.println("aaaz"+file);
@@ -26,8 +27,10 @@ public class UploadController  {
 
        file.transferTo(new File(baseDir + file.getOriginalFilename()));
         ModelAndView modelAndView = new ModelAndView("index");
+
 //        modelAndView.addObject("folderInfo", service.getFolder(httpServletRequest, "1","1").get());
         modelAndView.addObject("file",file);
+        modelAndView.addObject("message","message");
         return modelAndView;
 
     }

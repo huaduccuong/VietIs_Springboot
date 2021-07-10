@@ -2,7 +2,9 @@ package vn.co.vis.web.service.impl;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import vn.co.vis.web.dto.request.ContentRequest;
 import vn.co.vis.web.dto.request.FolderRequest;
+import vn.co.vis.web.dto.response.ContentResponse;
 import vn.co.vis.web.dto.response.FolderResponse;
 import vn.co.vis.web.dto.response.LoginResponse;
 import vn.co.vis.web.dto.response.UserResponse;
@@ -54,5 +56,30 @@ public class FolderServiceImpl extends AbstractService implements FolderService 
         String id = String.valueOf(folderRequest.getId());
         ResponseEntity<FolderResponse> response = apiExchangeService.put(httpServletRequest,backApiUrl + "/folder/"+id,folderRequest,FolderResponse.class);
         return response;
+    }
+    // Content -------------------------------------------------------------------------------------------------------------------------
+    @Override
+    public Optional<List<ContentResponse>> getContentsById(HttpServletRequest httpServletRequest, String id) {
+        ContentResponse[] responses = apiExchangeService.get(httpServletRequest, apiExchangeService.createURL(backApiUrl, "content", id), ContentResponse[].class);
+        if (responses == null || responses.length == 0) {
+            return Optional.empty();
+        }
+        return Optional.of(Arrays.asList(responses));
+    }
+
+    @Override
+    public Optional<ContentResponse> getContent(HttpServletRequest httpServletRequest, String id) {
+        return Optional.empty();
+    }
+
+    @Override
+    public ResponseEntity<String> deleteContent(HttpServletRequest httpServletRequest, String id) {
+        return null;
+    }
+
+    @Override
+    public Optional<ContentResponse> insertContent(HttpServletRequest httpServletRequest, ContentRequest contentRequest) {
+        ContentResponse response = apiExchangeService.post(httpServletRequest, backApiUrl + "/content", contentRequest, ContentResponse.class);
+        return Optional.of(response);
     }
 }

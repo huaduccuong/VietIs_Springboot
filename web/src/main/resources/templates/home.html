@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xml:lang="en" lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+
+
+
+<!--<table>-->
+<!--<tr th:each="content,index : ${contentInfo}">-->
+<!--    <td>-->
+<!--        <a th:href="@{${content.getUrl()}}">-->
+<!--            <img alt="photo" title="Google login" th:src="@{/img/content.png}" th:width="40" th:height="40"/>-->
+<!--        </a>-->
+<!--    </td>-->
+<!--    <td th:text="${content.getName()}"></td>-->
+<!--</tr>-->
+<!--</table>-->
+
+
+
+<table>
+<!--    <h1 th:text="${test}"></h1>-->
+    <tr th:each="content,index : ${contentInfo}">
+        <td>
+            <a th:href="@{${content.getUrl()}}">
+                <img alt="photo" title="Google login" th:src="@{/img/content.png}" th:width="40" th:height="40"/>
+            </a>
+        </td>
+
+        <td th:text="${content.getName()}">
+            <a th:href="@{file:///E:/VIET_IS/ProjectGit/VietIs_Springboot/web/src/main/resources/static/upload/download.png}">
+            </a>
+        </td>
+        <td th:text="${content.getUrl()}"></td>
+    </tr>
+    <tr th:each="folder,index : ${folderInfo}">
+            <td>
+                <a th:href="@{/home(id=${folder.id},user-id=${folder.getUserId()})}">
+                    <img alt="photo" title="Google login" th:src="@{/img/anhfolder.jpg}" th:width="40" th:height="40"/>
+                </a>
+            </td>
+            <td th:text="${folder.name}"> </td>
+            <td th:text="${folder.date}"> </td>
+            <td>
+                <form th:action="@{/folders/delete(id=${folder.id},user-id=${folder.getUserId()},parent-folder-id=${folder.getFolderId()})}" method="post">
+                <button type="submit" name="delete" value="Delete">Delete</button>
+                </form>
+            </td>
+        <td>
+            <form th:action="@{/folders/update}" method="get">
+                <input type="hidden"  th:value="${folder.getId()}" name="id"/>
+                <button type="submit" name="update" value="Update">Update</button>
+            </form>
+        </td>
+        <div th:if="${index.count==folderInfo.size()}">
+            <a th:href="@{/folders/insert(id-folder-parent=${folder.getFolderId()},id-user=${folder.getUserId()})}">
+                <img alt="photo" title="Google login" th:src="@{/img/add.png}" th:width="40" th:height="40"/>
+            </a>
+            <form th:action="@{/content}" method="post" enctype="multipart/form-data" >
+                <table>
+                    <input type="hidden"  th:value="${folder.getFolderId()}" name="folder-id"/>
+                    <tr><td>File to upload:</td><td><input type="file" name="file" /></td></tr>
+                    <tr><td></td><td><input type="submit" value="Upload" /></td></tr>
+                </table>
+            </form>
+        </div>
+    </tr>
+</table>
+</body>
+</html>

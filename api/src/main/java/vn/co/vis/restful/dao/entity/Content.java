@@ -16,4 +16,5 @@ public class Content {
     private Date date;
     private String format;
     private int folderId;
+    private String url;
 }

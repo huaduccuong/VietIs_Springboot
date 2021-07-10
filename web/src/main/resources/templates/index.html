@@ -7,9 +7,15 @@
     <script th:inline="javascript">
         /*<![CDATA[*/
 
+        var message = [[${message}]];
+        alert(message);
+
+        /*]]>*/
+  </script>
+
+        <script type="text/javascript">
+        /*<![CDATA[*/
         var message = /*[[${file}]]*/ 'default';
-
-
         /*]]>*/
         function sayHello() {
             alert("Hello World!")
@@ -49,15 +55,12 @@
             // Sau khi load thành công sẽ thực hiện đoạn code trong `onload` function phía trên
             fileReader.readAsDataURL(file);
         }
-
-        // Gắn sự kiện xử lý files sau khi User chọn
-        document.getElementById("files").addEventListener('change', handleFileSelect, false);
-        //-->
     </script>
 </head>
 <body>
 <h1>cay vđ</h1>
 <input type="button" onclick="renderFileInfo()" value="Hello!" />
 <input type="button" onclick="sayHello()" value="test" />
+<div id="files-list"></div>
 </body>
 </html>

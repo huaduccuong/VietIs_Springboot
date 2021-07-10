@@ -15,4 +15,5 @@ public class FolderResponse {
     private Date date;
     private int folderId;
     private int userId;
+
 }
