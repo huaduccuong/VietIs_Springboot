@@ -31,7 +31,8 @@ public class ContentServiceImpl extends AbstractService implements ContentServic
 
     @Override
     public ResponseEntity<String> deleteContent(HttpServletRequest httpServletRequest, String id) {
-        return null;
+        ResponseEntity<String> response = apiExchangeService.delete(httpServletRequest,backApiUrl + "/content/" + id,null,String.class);
+        return response;
     }
 
     @Override

@@ -16,24 +16,30 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/home")
 public class HomeController extends AbstractController<FolderService>{
-
     @GetMapping(value = "")
-    public ModelAndView getFolders(HttpServletRequest httpServletRequest, @RequestParam(name = "id") String idFolder, @RequestParam(name = "user-id") String userId) {
-        ModelAndView modelAndView = new ModelAndView();
-        if(!service.getFoldersById(httpServletRequest, idFolder, userId).isEmpty()) {
-            Optional<List<FolderResponse>> folderResponses = Optional.of(service.getFoldersById(httpServletRequest, idFolder, userId).get());
-            modelAndView = new ModelAndView("home");
+    public ModelAndView getFolders(HttpServletRequest httpServletRequest, @RequestParam(name = "id") String folderId, @RequestParam(name = "user-id") String userId) {
+        ModelAndView modelAndView = new ModelAndView("home");
+        modelAndView.addObject("parentFolderId",folderId);
+        modelAndView.addObject("userId",userId);
+
+        // folders don't have values
+        if(!service.getFoldersById(httpServletRequest, folderId, userId).isEmpty()) {
+            Optional<List<FolderResponse>> folderResponses = Optional.of(service.getFoldersById(httpServletRequest, folderId, userId).get());
             modelAndView.addObject("folderInfo", folderResponses.get());
-            if(!service.getContentsById(httpServletRequest,idFolder).isEmpty()) {
-                Optional<List<ContentResponse>> contentResponses = Optional.of(service.getContentsById(httpServletRequest, idFolder).get());
+        }
+        else {
+            modelAndView.addObject("folderInfo", null);
+        }
+
+        // contents don't have values
+        if(!service.getContentsById(httpServletRequest,folderId).isEmpty()) {
+                Optional<List<ContentResponse>> contentResponses = Optional.of(service.getContentsById(httpServletRequest, folderId).get());
                 modelAndView.addObject("contentInfo", contentResponses.get());
-            }
         }
         else
         {
-            modelAndView = new ModelAndView("folder-empty");
-            modelAndView.addObject("parentFolderId",idFolder);
-            modelAndView.addObject("userId",userId);
+            modelAndView.addObject("contentInfo", null);
+
         }
         return modelAndView;
     }
