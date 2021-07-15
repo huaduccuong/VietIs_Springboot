@@ -19,10 +19,10 @@ public class ContentController extends AbstractController<ContentService>{
         return response(service.getContentsByFolderId(id));
     }
 
-//    @GetMapping(value = "/{id}")
-//    public ResponseEntity<?> getContent(@PathVariable String id) {
-//        return response(service.getFolder(id));
-//    }
+    @GetMapping(value = "/detail/{id}")
+    public ResponseEntity<?> getContent(@PathVariable String id) {
+        return response(service.getContent(id));
+    }
     @DeleteMapping(value = "/{id}")
     public  ResponseEntity<?>  deleteContent(@PathVariable String id)
     {

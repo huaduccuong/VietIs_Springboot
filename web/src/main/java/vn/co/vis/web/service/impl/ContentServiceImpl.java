@@ -26,7 +26,12 @@ public class ContentServiceImpl extends AbstractService implements ContentServic
 
     @Override
     public Optional<ContentResponse> getContent(HttpServletRequest httpServletRequest, String id) {
-        return Optional.empty();
+        ContentResponse response
+                = apiExchangeService.get(httpServletRequest, apiExchangeService.createURL(backApiUrl, "content/detail", id), ContentResponse.class);
+        if (response == null) {
+            return Optional.empty();
+        }
+        return Optional.of(response);
     }
 
     @Override

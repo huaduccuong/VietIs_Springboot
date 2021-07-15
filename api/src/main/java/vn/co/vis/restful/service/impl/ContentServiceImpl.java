@@ -23,7 +23,8 @@ public class ContentServiceImpl extends AbstractService implements ContentServic
     ContentRepository contentRepository;
     @Override
     public Optional<ContentResponse> getContent(String id) {
-        return Optional.empty();
+        Optional<ContentResponse>  contentResponse = contentRepository.getContent(id);
+        return contentResponse ;
     }
 
     @Override

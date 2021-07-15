@@ -2,6 +2,7 @@ package vn.co.vis.web.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -24,15 +25,17 @@ import java.util.Optional;
 public class ContentController  extends AbstractController<ContentService>{
 
     @PostMapping(value = "")
-    public ModelAndView uploadFile(Model model, HttpServletRequest httpServletRequest, @RequestParam("file") MultipartFile file, @RequestParam("folder-id") String folderId) throws IllegalStateException, IOException {
-        String baseDir = "C:\\Users\\cuonghd\\Documents\\GitHub\\VietIs_Springboot\\web\\src\\main\\resources\\static\\upload\\";
-//        String baseDir = "E:\\VIET_IS\\ProjectGit\\VietIs_Springboot\\web\\src\\main\\resources\\static\\upload\\";
+    public ModelAndView uploadFile(HttpServletRequest httpServletRequest, @RequestParam("file") MultipartFile file, @RequestParam("folder-id") String folderId) throws IllegalStateException, IOException {
+//        String baseDir = "C:\\Users\\cuonghd\\Documents\\GitHub\\VietIs_Springboot\\web\\src\\main\\resources\\static\\upload\\";
+        String baseDir = "E:\\VIET_IS\\ProjectGit\\VietIs_Springboot\\web\\src\\main\\resources\\static\\upload\\";
         ContentRequest contentRequest = new ContentRequest();
         contentRequest.setName(file.getOriginalFilename());
         contentRequest.setFormat(file.getContentType());
         contentRequest.setFolderId(Integer.parseInt(folderId));
 
+
         String pathFile = baseDir + file.getOriginalFilename();
+
         file.transferTo(new File(pathFile));
         contentRequest.setUrl(pathFile);
 
@@ -41,7 +44,6 @@ public class ContentController  extends AbstractController<ContentService>{
         modelAndView.addObject("parentFolderId",folderId);
         modelAndView.addObject("userId",httpServletRequest.getParameter("user-id"));
         modelAndView.addObject("file",file);
-        model.addAttribute("file",file);
         //        modelAndView.addObject("folderInfo", service.getFolder(httpServletRequest, "1","1").get());
         return new ModelAndView("redirect:/home?id="+folderId+"&user-id="+ httpServletRequest.getParameter("user-id"));
 

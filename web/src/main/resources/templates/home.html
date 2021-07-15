@@ -52,8 +52,8 @@
                 </form>
             </td>
             <td>
-                <form th:action="@{/open-file/file-checking}"  th:object="${file}"method="get">
-                    <input type="hidden"  th:value="${file}" name="file"/>
+                <form th:action="@{/open-file/file-checking}" method="get">
+                    <input type="hidden"  th:value="${content.id}" name="contentId"/>
                     <button type="submit" name="fileView" value="fileView">View File</button>
                 </form>
             </td>

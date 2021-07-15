@@ -15,7 +15,12 @@ import java.util.Optional;
 public class ContentRepositoryImpl  extends AbstractRepository implements ContentRepository {
     @Override
     public Optional<ContentResponse> getContent(String id) {
-        return Optional.empty();
+        StringBuilder sql = new StringBuilder();
+        sql.append("SELECT ").append(attributeNamesForSelect(Content.class));
+        sql.append(" FROM ").append(getSimpleNameTable(Content.class));
+        sql.append(" WHERE id = ?");
+        ContentResponse contentResponse = jdbcTemplate.queryForObject(sql.toString(), new String[]{id}, new BeanPropertyRowMapper<>(ContentResponse.class));
+        return Optional.ofNullable(contentResponse);
     }
 
     @Override
