@@ -26,8 +26,8 @@ public class ContentController  extends AbstractController<ContentService>{
 
     @PostMapping(value = "")
     public ModelAndView uploadFile(HttpServletRequest httpServletRequest, @RequestParam("file") MultipartFile file, @RequestParam("folder-id") String folderId) throws IllegalStateException, IOException {
-//        String baseDir = "C:\\Users\\cuonghd\\Documents\\GitHub\\VietIs_Springboot\\web\\src\\main\\resources\\static\\upload\\";
-        String baseDir = "E:\\VIET_IS\\ProjectGit\\VietIs_Springboot\\web\\src\\main\\resources\\static\\upload\\";
+        String baseDir = "C:\\Users\\cuonghd\\Documents\\GitHub\\VietIs_Springboot\\web\\src\\main\\resources\\static\\upload\\";
+//        String baseDir = "E:\\VIET_IS\\ProjectGit\\VietIs_Springboot\\web\\src\\main\\resources\\static\\upload\\";
         ContentRequest contentRequest = new ContentRequest();
         contentRequest.setName(file.getOriginalFilename());
         contentRequest.setFormat(file.getContentType());

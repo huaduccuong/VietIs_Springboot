@@ -26,51 +26,19 @@ public class FileOpenningController extends AbstractController<ContentService>{
         String contentId = httpServletRequest.getParameter("contentId");
         Optional<ContentResponse> contentResponse = service.getContent(httpServletRequest,contentId);
         String typeOfFile = contentResponse.get().getFormat();
-        String[] words = typeOfFile.split("/");
-        switch ( words[0]) {
-            case  "video":
-                // Làm gì đó tại đây ...
-                break;
-            case  "application":
-                return new ModelAndView("redirect:/open-file/pdf?fileName="+contentResponse.get().getName());
-            case  "image":
-                // Làm gì đó tại đây ...
-                break;
-            case  "audio":
-                // Làm gì đó tại đây ...
-                break;
-            default:
-                // Làm gì đó tại đây ...
-        }
-        String fileName = contentResponse.get().getName();
-        ModelAndView modelAndView = new ModelAndView("fileOpen");
-        modelAndView.addObject("fileName",fileName);
-        return modelAndView;
+        return new ModelAndView("redirect:/open-file/all-of-file?fileName="+contentResponse.get().getName()+"&typeOfFile="+typeOfFile);
     }
 
-
-
-    @GetMapping(value = "/pdf")
-    public void showPDF(HttpServletResponse response,@RequestParam(name = "fileName") String fileName) throws IOException {
-        response.setContentType("application/pdf");
+    @GetMapping(value = "/all-of-file")
+    public void showFile(HttpServletResponse response,@RequestParam(name = "fileName") String fileName,@RequestParam(name = "typeOfFile") String typeOfFile) throws IOException {
+        response.setContentType(typeOfFile);
         //response.setHeader("Content-Disposition", "attachment; filename=\"demo.pdf\"");
-        InputStream inputStream = new FileInputStream(new File("E:\\VIET_IS\\ProjectGit\\VietIs_Springboot\\web\\src\\main\\resources\\static\\upload\\"+fileName));
-//        InputStream inputStream = new FileInputStream(new File("C:\\Users\\cuonghd\\Documents\\GitHub\\VietIs_Springboot\\web\\src\\main\\resources\\static\\upload\\"+fileName));
+//        InputStream inputStream = new FileInputStream(new File("E:\\VIET_IS\\ProjectGit\\VietIs_Springboot\\web\\src\\main\\resources\\static\\upload\\"+fileName));
+        InputStream inputStream = new FileInputStream(new File("C:\\Users\\cuonghd\\Documents\\GitHub\\VietIs_Springboot\\web\\src\\main\\resources\\static\\upload\\"+fileName));
         int nRead;
         while ((nRead = inputStream.read()) != -1) {
             response.getWriter().write(nRead);
         }
     }
-//    @GetMapping(value = "/otherFile")
-//    public void showOtherFile(HttpServletResponse response,@RequestParam(name = "fileName") String fileName) throws IOException {
-//        response.setContentType("application/pdf");
-//        //response.setHeader("Content-Disposition", "attachment; filename=\"demo.pdf\"");
-//        InputStream inputStream = new FileInputStream(new File("E:\\VIET_IS\\ProjectGit\\VietIs_Springboot\\web\\src\\main\\resources\\static\\upload\\"+fileName));
-////        InputStream inputStream = new FileInputStream(new File("C:\\Users\\cuonghd\\Documents\\GitHub\\VietIs_Springboot\\web\\src\\main\\resources\\static\\upload\\"+fileName));
-//        int nRead;
-//        while ((nRead = inputStream.read()) != -1) {
-//            response.getWriter().write(nRead);
-//        }
-//    }
 
 }

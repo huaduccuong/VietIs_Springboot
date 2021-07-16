@@ -14,22 +14,27 @@
     </div>
     <table>
     <tr th:each="folder,index : ${folderInfo}">
-            <td>
-                <a th:href="@{/home(id=${folder.id},user-id=${folder.getUserId()})}">
+        <td>
+            <a th:href="@{/home(id=${folder.id},user-id=${folder.getUserId()})}">
                     <img alt="photo" title="Google login" th:src="@{/img/anhfolder.jpg}" th:width="40" th:height="40"/>
-                </a>
-            </td>
-            <td th:text="${folder.name}"> </td>
-            <td th:text="${folder.date}"> </td>
-            <td>
-                <form th:action="@{/folders/delete(id=${folder.id},user-id=${folder.getUserId()},parent-folder-id=${folder.getFolderId()})}" method="post">
+            </a>
+        </td>
+        <td th:text="${folder.name}"> </td>
+        <td th:text="${folder.date}"> </td>
+        <td>
+            <form th:action="@{/folders/delete(id=${folder.id},user-id=${folder.getUserId()},parent-folder-id=${folder.getFolderId()})}" method="post">
                 <button type="submit" name="delete" value="Delete">Delete</button>
-                </form>
-            </td>
+            </form>
+        </td>
         <td>
             <form th:action="@{/folders/update}" method="get">
                 <input type="hidden"  th:value="${folder.getId()}" name="id"/>
                 <button type="submit" name="update" value="Update">Update</button>
+            </form>
+        </td>
+        <td>
+            <form th:action="@{/note/folder-id(folderId=${folder.id}, userId=${folder.getUserId()})}" method="post">
+                <button type="submit" name="note" value="Note">Note</button>
             </form>
         </td>
     </tr>
@@ -55,6 +60,11 @@
                 <form th:action="@{/open-file/file-checking}" method="get">
                     <input type="hidden"  th:value="${content.id}" name="contentId"/>
                     <button type="submit" name="fileView" value="fileView">View File</button>
+                </form>
+            </td>
+            <td>
+                <form th:action="@{/note/contentId(contentId=${content.id},userId=${userId})}" method="post">
+                    <button type="submit" name="note" value="Note">Note</button>
                 </form>
             </td>
         </tr>
