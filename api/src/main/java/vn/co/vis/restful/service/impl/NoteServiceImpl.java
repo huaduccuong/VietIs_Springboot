@@ -40,7 +40,7 @@ public class NoteServiceImpl extends AbstractService implements NoteService {
 
     @Override
     public Optional<List<NoteResponse>> getNotesByContentId(String contentId, String userId) {
-        List<Note> notes = noteRepository.getNotesByFolderId(contentId,userId).orElseThrow(() -> {
+        List<Note> notes = noteRepository.getNotesByContentId(contentId,userId).orElseThrow(() -> {
             throw new ResourceNotFoundException();
         });
         return Optional.of(notes.stream()

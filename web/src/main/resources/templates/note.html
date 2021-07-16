@@ -9,9 +9,11 @@
 <table>
 <tr th:each="note,index : ${notes}">
   <td>
-      <textarea name="noteInfor" rows="5" cols="30" th:value="${note.getNote()}">
-      </textarea>
+      <input type="text" name="noteInfor" th:value="${note.getNote()}" readonly>
   </td>
+    <td>
+        <input type="text" name="date" th:value="${note.getDate()}" readonly>
+    </td>
 </tr>
 </table>
 
@@ -19,8 +21,7 @@
 <form th:action="@{/note/insert}" method="post">
     <input type="date" name="date">
 
-  <textarea name="noteInfor" rows="5" cols="30">
-  </textarea>
+    <input type="text" name="noteInfor">
 
     <input type="hidden" name="folderId" th:value="${folderId}">
 
@@ -28,7 +29,8 @@
 
     <input type="hidden" name="contentId" th:value="${contentId}">
 
-  <button type="submit" name="note" value="Note">Note</button>
+    <button type="submit" name="action" value="noteFolder">Note Folder</button>
+    <button type="submit" name="action" value="noteContent">Note Content</button>
 </form>
 </body>
 </html>

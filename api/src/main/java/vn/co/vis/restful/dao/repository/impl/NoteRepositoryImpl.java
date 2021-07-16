@@ -39,7 +39,7 @@ public class NoteRepositoryImpl extends AbstractRepository implements NoteReposi
         StringBuilder sql = new StringBuilder();
         sql.append("SELECT ").append(attributeNamesForSelect(Note.class));
         sql.append(" FROM ").append(getSimpleNameTable(Note.class));
-        sql.append(" WHERE folder_id = ? and user_id = ?");
+        sql.append(" WHERE content_id = ? and user_id = ?");
         List<Note> notes = jdbcTemplate.query(sql.toString(), new String[]{contentId, userId}, new BeanPropertyRowMapper<>(Note.class));
         return Optional.ofNullable(notes);
     }

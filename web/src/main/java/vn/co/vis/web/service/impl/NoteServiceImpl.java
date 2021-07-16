@@ -27,7 +27,7 @@ public class NoteServiceImpl extends AbstractService implements NoteService {
 
     @Override
     public Optional<List<NoteResponse>> getNoteByContentId(HttpServletRequest httpServletRequest, String contentId, String userId) {
-        NoteResponse[] responses = apiExchangeService.get(httpServletRequest, apiExchangeService.createURL(backApiUrl, "note/content", contentId, userId), NoteResponse[].class);
+        NoteResponse[] responses = apiExchangeService.get(httpServletRequest, apiExchangeService.createURL(backApiUrl, "/note/content", contentId, userId), NoteResponse[].class);
         if (responses == null || responses.length == 0) {
             return Optional.empty();
         }
