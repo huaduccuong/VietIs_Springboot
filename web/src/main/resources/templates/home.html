@@ -33,6 +33,13 @@
             </form>
         </td>
         <td>
+            <form th:action="@{/sharing-folder}" method="post">
+                <input type="hidden"  th:value="${folder.getUserId()}" name="userId"/>
+                <input type="hidden"  th:value="${folder.id}" name="folderId"/>
+                <button type="submit" name="share" value="Share">Share</button>
+            </form>
+        </td>
+        <td>
             <form th:action="@{/note/folder-id(folderId=${folder.id}, userId=${folder.getUserId()})}" method="post">
                 <button type="submit" name="note" value="Note">Note</button>
             </form>
@@ -67,6 +74,8 @@
                     <button type="submit" name="note" value="Note">Note</button>
                 </form>
             </td>
+
+
         </tr>
 </table>
 <div>
@@ -82,5 +91,9 @@
         </table>
     </form>
 </div>
+    <form th:action="@{/sharing-folder}" method="get">
+        <input type="hidden"  th:value="${userId}" name="userId"/>
+        <button type="submit" name="viewSharing" value="viewSharing">View Sharing</button>
+    </form>
 </body>
 </html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xml:lang="en" lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div>
+    <a th:href="@{/home(id=1,user-id=${userId})}">
+        <img alt="photo" title="Google login" th:src="@{/img/home.png}" th:width="40" th:height="40"/>
+    </a>
+    <label>Home Page</label>
+</div>
+<table>
+    <tr th:each="folder,index : ${folderInfo}">
+        <td>
+            <a th:href="@{/home(id=${folder.id},user-id=${folder.getUserId()})}">
+                <img alt="photo" title="Google login" th:src="@{/img/anhfolder.jpg}" th:width="40" th:height="40"/>
+            </a>
+        </td>
+        <td th:text="${folder.name}"> </td>
+        <td th:text="${folder.date}"> </td>
+        <td>
+            <form th:action="@{/folders/delete(id=${folder.id},user-id=${folder.getUserId()},parent-folder-id=${folder.getFolderId()})}" method="post">
+                <button type="submit" name="delete" value="Delete">Delete</button>
+            </form>
+        </td>
+        <td>
+            <form th:action="@{/folders/update}" method="get">
+                <input type="hidden"  th:value="${folder.getId()}" name="id"/>
+                <button type="submit" name="update" value="Update">Update</button>
+            </form>
+        </td>
+        <td>
+            <form th:action="@{/note/folder-id(folderId=${folder.id}, userId=${folder.getUserId()})}" method="post">
+                <button type="submit" name="note" value="Note">Note</button>
+            </form>
+        </td>
+    </tr>
+
+
+
+    <tr th:each="content,index : ${contentInfo}">
+        <td>
+            <a th:href="@{/open-file}">
+                <img alt="photo" title="Google login" th:src="@{/img/content.png}" th:width="40" th:height="40"/>
+            </a>
+        </td>
+        <td th:text="${content.getName()}">
+        </td>
+        <td>
+            <form th:action="@{/content/delete(id=${content.id})}" method="post">
+                <input type="hidden"  th:value="${parentFolderId}" name="parentFolderId"/>
+                <input type="hidden"  th:value="${userId}" name="userId"/>
+                <button type="submit" name="delete" value="Delete">Delete</button>
+            </form>
+        </td>
+        <td>
+            <form th:action="@{/open-file/file-checking}" method="get">
+                <input type="hidden"  th:value="${content.id}" name="contentId"/>
+                <button type="submit" name="fileView" value="fileView">View File</button>
+            </form>
+        </td>
+        <td>
+            <form th:action="@{/note/content-id(contentId=${content.id},userId=${userId})}" method="post">
+                <button type="submit" name="note" value="Note">Note</button>
+            </form>
+        </td>
+    </tr>
+</table>
+<div>
+    <a th:href="@{/folders/insert(id-folder-parent=${parentFolderId},id-user=${userId})}">
+        <img alt="photo" title="add" th:src="@{/img/add.png}" th:width="40" th:height="40"/>
+    </a>
+    <form th:action="@{/content}" method="post" enctype="multipart/form-data" >
+        <table>
+            <input type="hidden"  th:value="${parentFolderId}" name="folder-id"/>
+            <input type="hidden"  th:value="${userId}" name="user-id"/>
+            <tr><td>File to upload:</td><td><input type="file" name="file" /></td></tr>
+            <tr><td></td><td><input type="submit" value="Upload" /></td></tr>
+        </table>
+    </form>
+</div>
+</body>
+</html>

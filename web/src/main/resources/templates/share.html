@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xml:lang="en" lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Login page</title>
+</head>
+<body>
+<form th:action="@{/content}" method="post" enctype="multipart/form-data" >
+  <table>
+    <td>
+      <select th:field="*{userId}">
+        <option value=""> -- </option>
+        <option th:each="user : ${users}"
+                th:value="${user.Id}"
+                th:utext="${user.firstName}"/>
+      </select>
+    </td>
+  </table>
+</form>
+</body>
+</html>
